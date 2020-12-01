@@ -1,6 +1,7 @@
 # POVition
 
 Funktional:
+-----------
 
 Muss-Kriterien
 
@@ -22,17 +23,10 @@ Soll-Kriterien
 - VR-Teleport als optionale Fortbewegung
 
 Nicht-Funktional:
+-----------------
+
 - angemessene Performance, muss flüssig laufen
 - schlichtes Leveldesign, jedes Objekt sollte Sinn haben
 - angemessene Bewegungsmechanik über VR
 - eindeutige Lösungen, keine Levellösungen über Genauigkeiten
 - keine Loopholes in Leveldesign
-
-Technologien:
-- HTC Vive
-
-Interaktionstechniken:
-- Umschauen durch Kopfdrehung
-- Swap mit Cube durch anvisieren mit Controller
-- Bewegung im Level über Teleport, da Knopfbewegung schwindel erregt
-- Support für Maus und Tastatur
