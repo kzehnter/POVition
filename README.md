@@ -1,20 +1,25 @@
 # POVition
 
-Anforderungsliste:
-
 Funktional:
+
+Muss-Kriterien
+
 - Puzzlespiel mit 10 Levels
-- Titelmenü
-- Levelauswahl
-- Spieler tauscht mit anvisiertem Swapcube die Position
-- Druckplatten, die Aktionen auslösen
-- bewegbare Türen, Wände, Platformen
-- verschiedene Swapcubes, mit unterschiedlichen Funktionen
-	- Zielblock, der berührt werden muss für Levelabschluss 
-	- Standardblock
+- Titelmenü + Levelauswahl
+- Spieler tauscht Position mit Block über Anvisierung mit Controller
+- Zielblock, der berührt werden muss für Levelabschluss
 - Steuerung und Ansicht über HTC Vive
-- Support für Maus und Tastatur
-- Playerbewegung über VR-Teleport
+- Bewegung erfolgt kontinuierlich über Knopfdruck
+
+Soll-Kriterien
+
+- verschiedene teleportierende Blöcke, mit unterschiedlichen Funktionen
+       * Timer
+       * Countdown
+       * Verkettung
+- Druckplatten, die beliebige Aktionen auslösen können
+- bewegbare Strukturen/Barrieren
+- VR-Teleport als optionale Fortbewegung
 
 Nicht-Funktional:
 - angemessene Performance, muss flüssig laufen
