@@ -3,7 +3,7 @@
 ##### Muss-Kriterien
 
 - Puzzlespiel mit 10 Levels
-- Titelmenü + Levelauswahl als VR-Menü
+- Titelmenü + Levelauswahl + Pausenmenü als VR-Menü
 - Support für Maus und Tastatur
 - Bewegung erfolgt über VR-Teleport
 - Spieler kann sich frei im Level bewegen und wird nur von Barrieren und Blöcken gestoppt
