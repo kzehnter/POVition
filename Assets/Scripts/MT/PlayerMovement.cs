@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
- *  Manages Movement of player object
+/** Manages Movement of player object
  *  J - K for turning
  *  W - S for moving
  *  Adjust speed in Inspector
