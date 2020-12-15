@@ -4,9 +4,8 @@
 
 - Puzzlespiel mit 10 Levels
 - Titelmenü + Levelauswahl + Pausenmenü als VR-Menü
-- Support für Maus und Tastatur
 - Bewegung erfolgt über VR-Teleport
-- Spieler kann sich frei im Level bewegen und wird nur von Barrieren und Blöcken gestoppt
+    * Spieler kann sich frei im Level bewegen und wird nur von Barrieren und Blöcken gestoppt
 - Zentrales Spielelement: teleportierender Block
     * Spieler tauscht Position mit Block über Anvisierung mit Controller
     * besitzt Physik, ist gravitativ
@@ -20,9 +19,16 @@
         * Ist mit einer Zahl n beschriftet
         * kann exakt n-mal teleportiert werden, die Beschriftung wird bei jedem Teleport mit angepasst
         * bei n<1 zerstört sich der Block
+- Druckplatten, die beliebige Aktionen auslösen können
+- bewegbare Strukturen/Barrieren
+    * können nicht teleportiert werden
+    * können transparent sein oder blickdicht sein
+    * Barrieren können sein: Türen, Wände, Glas, Platformen, etc.
+    * Bewegungen erfolgen automatisch oder können gesteuert werden (z.B. durch Druckplatten) 
 
 ##### Soll-Kriterien
 
+- Support für Maus und Tastatur
 - Verketteter Block
     * ist verbunden mit mindestens einem weiteren Block
     * Bei Teleport mit einem Block der Kette wird der Spieler direkt anschließend mit dem nächsten Kettenblock getauscht
