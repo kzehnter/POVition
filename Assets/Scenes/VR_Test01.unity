@@ -891,6 +891,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: -3322881320263628418, guid: 03641f56712f135bdba04855ef55aff9,
+        type: 3}
+      propertyPath: m_Name
+      value: Plate
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 03641f56712f135bdba04855ef55aff9,
         type: 3}
       propertyPath: m_Name
@@ -898,6 +903,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03641f56712f135bdba04855ef55aff9, type: 3}
+--- !u!1 &1248133152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3322881320263628418, guid: 03641f56712f135bdba04855ef55aff9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1248133151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1248133153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248133152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904e46abf5db8d31c9b756475efe98f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  affectedObject: {fileID: 0}
+  smoothness: 10
 --- !u!1 &1343906493
 GameObject:
   m_ObjectHideFlags: 0
