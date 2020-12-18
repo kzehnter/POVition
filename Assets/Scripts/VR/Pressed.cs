@@ -16,39 +16,50 @@ public class Pressed : MonoBehaviour
      */
     public GameObject affectedObject;
     
-    //* Number of single steps from up to down, 10 is good.
+    /** Number of single steps from up to down. 
+     *  10 is good, defines smoothness and
+     *  speed for movement ( 1/smoothness )
+     */
     public int smoothness;
     
-    /* Tracks position of movement.
-     * 0 is down, smoothness is up
+    /** Tracks position of movement.
+     *  0 is down, smoothness is up
      */
     int position;
     
-    //* Changes position of plate.
+    /** Changes position of plate.
+     */
     Vector3 movement;
 
-    //* Setting variables.
+    /** Is weight on pressure plate?.
+     *  Changed by OnTriggerEnter()
+     */
+    bool triggered = false;
+
     void Start(){
         position = smoothness;
         movement = new Vector3(0,0.1f/smoothness,0);
     }
-    
-    /** Checks for Player or Cube on top.
-     *  true if pressed, false if not
+
+    /** Checks for GameObjects on top of plate.
+     *  Triggers plate movement and actions
      */
-    bool PressCheck(){
-        // TODO
-        // https://answers.unity.com/questions/1272073/im-wondering-how-you-make-a-pressure-plate-system.html
-        if (Input.GetKey(KeyCode.F)){
-            return true;
-        } else return false;
+    void OnTriggerEnter(Collider other){
+        triggered = true;
+    }
+
+    /** Trigger stops.
+     *  Moves plate up
+     */
+    void OnTriggerExit(Collider other){
+        triggered = false;
     }
 
     /** All pressure plate behaviour.
      *  Moving up and down
      */
-    void Update(){ 
-        if (PressCheck()){
+    void FixedUpdate(){ 
+        if (triggered){
             if (position != 0){
                 position--;
                 transform.position -= movement;
