@@ -10,21 +10,22 @@ using Valve.VR;
  */
 public class PointerAction : MonoBehaviour
 {
-    /** quaternion for turning the player around after teleporting
+    /** quaternion for turning the player around after teleporting.
      */
     private static readonly Quaternion turningRotation = Quaternion.AngleAxis(180, Vector3.up);
-    //* Used to do ... TODO
+    /** Position of camera.
+     */
     public Transform _camera;
-    /** input device
+    /** input device.
      */
     public SteamVR_Behaviour_Pose pose;
-    /** player properties
+    /** player properties.
      */
     public Transform player;
-    /** input key
+    /** input key.
      */
     public SteamVR_Action_Boolean interactWithUI = SteamVR_Input.GetBooleanAction("InteractUI");
-    /** cooldown time for block teleport
+    /** cooldown time for block teleport.
      */
     private int cooldown = 0;
     
