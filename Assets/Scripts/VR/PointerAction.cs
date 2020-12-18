@@ -3,40 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 
-/** Manages Actions of pointer with laser. 
+/** Manages actions of the laser pointer, currently only block teleportation.
  *
  *  @author Eduard
  *  @date 15.12.20
- *
- *  TODO
  */
 public class PointerAction : MonoBehaviour
 {
+    /** quaternion for turning the player around after teleporting
+     */
+    private static readonly Quaternion turningRotation = Quaternion.AngleAxis(180, Vector3.up);
     //* Used to do ... TODO
     public Transform _camera;
-    //* TODO
+    /** input device
+     */
     public SteamVR_Behaviour_Pose pose;
-    //* TODO
+    /** player properties
+     */
+    public Transform player;
+    /** input key
+     */
     public SteamVR_Action_Boolean interactWithUI = SteamVR_Input.GetBooleanAction("InteractUI");
-    //* TODO
+    /** cooldown time for block teleport
+     */
     private int cooldown = 0;
-    //* TODO
-    private Quaternion turningRotation = Quaternion.AngleAxis(180, Vector3.up);
-    //* TODO
-    private Transform player;
     
-    /** Does TODO at beginning.
-     *  TODO: ganz kurze Erklärung
+    /** Initializes pose.
      */
     void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
         if (pose == null)
             pose = this.GetComponent<SteamVR_Behaviour_Pose>();
     }
     
-    /** Does TODO at every Tick.
-     *  TODO: ausführliche Erklärung
+    /** Performs raycasts from the right hand and checks for colliding blocks. Performs block teleport if interactWithUI is active.
      */
     void Update()
     {
