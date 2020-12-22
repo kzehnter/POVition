@@ -28,6 +28,9 @@ public class PointerAction : MonoBehaviour
     /** cooldown time for block teleport.
      */
     private int cooldown = 0;
+    /** prevents pointer collision with elements in layer
+     */
+    public LayerMask layerMask;
     
     /** Initializes pose.
      */
@@ -43,7 +46,10 @@ public class PointerAction : MonoBehaviour
     {
         if (cooldown > 0)
             cooldown--;
-        foreach (RaycastHit hit in Physics.RaycastAll(transform.position, transform.forward, 100.0f))
+
+        Ray raycast = new Ray(transform.position, transform.forward);
+        RaycastHit hit;
+        if (Physics.Raycast(raycast, out hit, 100.0f, layerMask))
         {
             GameObject obj = hit.collider.gameObject;
             if (interactWithUI != null && interactWithUI.GetState(pose.inputSource))
@@ -57,7 +63,6 @@ public class PointerAction : MonoBehaviour
                     player.rotation *= turningRotation;
                     obj.SetActive(true);
                     cooldown = 100;
-                    break;
                 }
             }
         }
