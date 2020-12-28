@@ -42,7 +42,7 @@ public class PointerAction : MonoBehaviour
     
     /** Performs raycasts from the right hand and checks for colliding blocks. Performs block teleport if interactWithUI is active.
      */
-    void Update()
+    void FixedUpdate()
     {
         if (cooldown > 0)
             cooldown--;

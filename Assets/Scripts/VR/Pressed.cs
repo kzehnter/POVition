@@ -48,6 +48,13 @@ public class Pressed : MonoBehaviour
         triggered = true;
     }
 
+    /** Checks for Collider often.
+     *  Fixes bug where after a teleport the pressure plate doesn't go down
+     */
+    void OnTriggerStay(Collider other){
+        triggered = true;
+    }
+
     /** Trigger stops.
      *  Moves plate up
      */
@@ -73,5 +80,6 @@ public class Pressed : MonoBehaviour
             }
             // TODO: Action for affectedObject here
         }
+        triggered = false; //bug fix
     }
 }
