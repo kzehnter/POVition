@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Teleportable
+  - TPswap
+  - TPtimer
+  - TPgoal
+  - TPcount
   layers:
   - Default
   - TransparentFX

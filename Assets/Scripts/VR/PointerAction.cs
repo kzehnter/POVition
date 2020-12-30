@@ -32,6 +32,19 @@ public class PointerAction : MonoBehaviour
      */
     public LayerMask layerMask;
     
+    /**
+     *
+     */
+    void Swap(GameObject obj){
+        Vector3 pos = obj.transform.position;
+        obj.SetActive(false);
+        obj.transform.position = player.position + Vector3.up;
+        player.position = pos;
+        player.rotation *= turningRotation;
+        obj.SetActive(true);
+        cooldown = 100;
+    }
+
     /** Initializes pose.
      */
     void Start()
@@ -54,15 +67,27 @@ public class PointerAction : MonoBehaviour
             GameObject obj = hit.collider.gameObject;
             if (interactWithUI != null && interactWithUI.GetState(pose.inputSource))
             {
-                if (obj.CompareTag("Teleportable") && cooldown == 0)
+                if (cooldown == 0)
                 {
-                    Vector3 pos = obj.transform.position;
-                    obj.SetActive(false);
-                    obj.transform.position = player.position + Vector3.up;
-                    player.position = pos;
-                    player.rotation *= turningRotation;
-                    obj.SetActive(true);
-                    cooldown = 100;
+                    // different tags for cubes 
+                    switch (obj.tag) {
+                        case "TPswap":
+                            Swap(obj);
+                            break;
+                        case "TPgoal":
+                            Swap(obj);
+                            //Goal();
+                            break;
+                        case "TPtimer":
+                            Swap(obj);
+                            //delay
+                            Swap(obj);
+                            break;
+                        case "TPcount":
+                            Swap(obj);
+                            // if countdown < 1; destroy(); else 
+                            break;
+                    }
                 }
             }
         }

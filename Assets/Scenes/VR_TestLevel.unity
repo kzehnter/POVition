@@ -1567,6 +1567,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Swap Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 6648905887692537559, guid: d22d20ea9ead12b4aaa50829f9234cb5,
+        type: 3}
+      propertyPath: m_TagString
+      value: TPswap
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d22d20ea9ead12b4aaa50829f9234cb5, type: 3}
 --- !u!1001 &6239769017820353533
