@@ -25,7 +25,7 @@ public class Pressed : MonoBehaviour
     /** Tracks position of movement.
      *  0 is down, smoothness is up
      */
-    int position;
+    int pressedPosition;
     
     /** Changes position of plate.
      */
@@ -37,7 +37,7 @@ public class Pressed : MonoBehaviour
     bool triggered = false;
 
     void Start(){
-        position = smoothness;
+        pressedPosition = smoothness;
         movement = new Vector3(0,0.1f/smoothness,0);
     }
 
@@ -67,15 +67,15 @@ public class Pressed : MonoBehaviour
      */
     void FixedUpdate(){ 
         if (triggered){
-            if (position != 0){
-                position--;
+            if (pressedPosition != 0){
+                pressedPosition--;
                 transform.position -= movement;
                 // maybe add colors changes and stuff here   
             }
             // TODO: Action for affectedObject here
         } else {
-            if (position != smoothness){
-                position++;
+            if (pressedPosition != smoothness){
+                pressedPosition++;
                 transform.position += movement;
             }
             // TODO: Action for affectedObject here
