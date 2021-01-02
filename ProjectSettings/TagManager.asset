@@ -4,11 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - TPswap
-  - TPtimer
-  - TPgoal
-  - TPcount
   - SwapCube
+  - TPgoal
   layers:
   - Default
   - TransparentFX
@@ -18,8 +15,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Test
+  - Marking
   - 
   - 
   - 

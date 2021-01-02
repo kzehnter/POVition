@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class DoorAction : MonoBehaviour
 {
+    public Switch trigger;
     private Animator animator;
 
-    public GameObject trigger;
-    private PressurePlate _trigger;
     void Awake()
     {
         animator = GetComponent<Animator>();
-        _trigger = trigger.GetComponentInChildren<PressurePlate>();
-        _trigger.PressurePlateToggle += OnPressurePlateToggle;
+        trigger.SwitchToggle += OnPressurePlateToggle;
     }
 
     private void OnDestroy()
     {
-        _trigger.PressurePlateToggle -= OnPressurePlateToggle;
+        trigger.SwitchToggle -= OnPressurePlateToggle;
     }
 
     void OnPressurePlateToggle(bool triggered)
