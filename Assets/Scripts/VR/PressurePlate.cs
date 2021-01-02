@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,8 +10,11 @@ using UnityEngine;
  *
  *  Moves Plate down and up, makes actions happen
  */
-public class Pressed : MonoBehaviour
+public class PressurePlate : MonoBehaviour
 {
+
+    public event Action<bool> PressurePlateToggle;
+
     /** Object, which gets affected by Press.
      *  Can be specified in Inspector
      */
@@ -46,6 +50,7 @@ public class Pressed : MonoBehaviour
      */
     void OnTriggerEnter(Collider other){
         triggered = true;
+        PressurePlateToggle(triggered);
     }
 
     /** Checks for Collider often.
@@ -60,6 +65,7 @@ public class Pressed : MonoBehaviour
      */
     void OnTriggerExit(Collider other){
         triggered = false;
+        PressurePlateToggle(triggered);
     }
 
     /** All pressure plate behaviour.

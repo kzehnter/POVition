@@ -14,7 +14,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 186651012793723772, guid: 03641f56712f135bdba04855ef55aff9, type: 3}
---- !u!114 &766321071
+--- !u!114 &7352824825490848184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -27,7 +27,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   affectedObject: {fileID: 0}
-  smoothness: 10
+  smoothness: 100
 --- !u!1001 &6239769018352814366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95,32 +95,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 03641f56712f135bdba04855ef55aff9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 03641f56712f135bdba04855ef55aff9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 03641f56712f135bdba04855ef55aff9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 03641f56712f135bdba04855ef55aff9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 03641f56712f135bdba04855ef55aff9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 03641f56712f135bdba04855ef55aff9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 03641f56712f135bdba04855ef55aff9,
         type: 3}
