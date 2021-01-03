@@ -11,11 +11,8 @@ public class SwapCubeAction_Count : SwapCubeAction
 
     public override void performAction(Transform target)
     {
-        if (count < countNumber){
-            performSwap(target);
-            count++;
-        } else {
-            Destroy(gameObject);
-        }
+        performSwap(target);
+        count++;
+        if (count >= countNumber) { Destroy(gameObject); }
     }
 }

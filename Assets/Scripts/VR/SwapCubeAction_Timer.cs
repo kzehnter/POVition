@@ -7,15 +7,15 @@ public class SwapCubeAction_Timer : SwapCubeAction
     [SerializeField]
     private int delayTime;
 
-    IEnumerator waiter(Transform target)
-    {
-        performSwap(target);
-        yield return new WaitForSeconds(delayTime);
-        performSwap(target);
+    IEnumerator waiter()
+    { 
+        yield return new WaitForSeconds(delayTime);   
     }
     
     public override void performAction(Transform target)
     {
-        StartCoroutine(waiter(target));
+        performSwap(target);
+        StartCoroutine(waiter());
+        performSwap(target);
     }
 }
