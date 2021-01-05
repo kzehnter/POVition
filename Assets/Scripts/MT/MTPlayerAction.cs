@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Valve.VR.Extras;
+using Scripts.MT;
 
 /** MT Variant of PlayerAction. 
  *
@@ -17,19 +17,17 @@ public class MTPlayerAction : MonoBehaviour
     private int swapCooldown;
     private int _swapCooldown = 0;
 
-    private SteamVR_LaserPointer laserPointer;
+    private SwapHandler swapEvent;
 
-    /** adds callback to laser pointer click event */
     private void Awake()
     {
-        laserPointer = GetComponentInChildren<SteamVR_LaserPointer>();
-        laserPointer.PointerClick += OnPointerClick;
+        swapEvent = GetComponentInChildren<SwapHandler>();
+        swapEvent.MouseClick += OnMouseClick;
     }
 
-    /** removes all event callbacks */
     private void OnDestroy()
     {
-        laserPointer.PointerClick -= OnPointerClick;
+        swapEvent.MouseClick -= OnMouseClick;
     }
 
     /** updates cooldown */
@@ -42,8 +40,7 @@ public class MTPlayerAction : MonoBehaviour
             
     }
 
-    /** Event callback. Triggers SwapCube interaction via laser pointer click  */
-    private void OnPointerClick(object sender, PointerEventArgs args)
+    private void OnMouseClick(object sender, SwapEventArgs args)
     {
         if (args.target.tag == "SwapCube" && _swapCooldown == 0)
         {

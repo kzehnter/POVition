@@ -30,10 +30,14 @@ public class PlayerMovement : MonoBehaviour
     /** Tracks vertical camera position.
      */
     private float yRot = 0;
-
+    /** Used to move player to ground.
+     */
+    private float gravity = 0;
 
     /** Movement at every Tick.
-     *  Forwards/Backwards with transform.Translate
+     *  Character Controller used for movement
+     *  Mouse for Orientation
+     *  Player can move on ground, turn head and fall
      */
     void Update()
     {
@@ -42,10 +46,12 @@ public class PlayerMovement : MonoBehaviour
         yRot -= mouseY*yRotSpeed;
         camera.transform.localRotation = Quaternion.Euler(yRot, 0, 0);
         transform.Rotate(0, mouseX*xRotSpeed, 0); 
+        gravity -= 9.81f * Time.deltaTime;
         
         // lock mouse to game window
         if (Input.GetMouseButtonDown(0)) { Cursor.lockState = CursorLockMode.Locked; }
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), gravity, Input.GetAxis("Vertical"));
         player.Move((transform.rotation * move.normalized * speed) * Time.deltaTime);
+        if (player.isGrounded){gravity = 0;}
     }
 }
