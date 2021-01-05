@@ -10,19 +10,22 @@ namespace Scripts.MT {
  *
  */
 public class SwapHandler : MonoBehaviour {
-    public event SwapEventHandler MouseClick;  
+    public event SwapEventHandler SwapClick;  
 
-    public virtual void OnMouseClick(SwapEventArgs e) {
-        if (MouseClick != null) { MouseClick(this, e); }
+    public virtual void OnSwapClick(SwapEventArgs e) {
+        if (SwapClick != null) { Debug.Log("Juhuuuuuuuu"); SwapClick(this, e); }
     }
 
     void Update() {
-        Ray raycast = new Ray(transform.position, transform.forward);
-        RaycastHit hit;
-        bool bHit = Physics.Raycast(raycast, out hit);
-        if (bHit) { 
-            SwapEventArgs args = new SwapEventArgs();
-            args.target = hit.transform; 
+        if (Input.GetMouseButtonDown(0)){
+            Ray raycast = new Ray(transform.position, /*Camera direction*/transform.GetChild(0).forward);
+            RaycastHit hit;
+            bool bHit = Physics.Raycast(raycast, out hit);
+            if (bHit) { 
+                SwapEventArgs args = new SwapEventArgs();
+                args.target = hit.transform;
+                Debug.Log(hit.transform.name);
+            }
         }       
     }
 

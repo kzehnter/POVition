@@ -22,12 +22,12 @@ public class MTPlayerAction : MonoBehaviour
     private void Awake()
     {
         swapEvent = GetComponentInChildren<SwapHandler>();
-        swapEvent.MouseClick += OnMouseClick;
+        swapEvent.SwapClick += OnSwapClick;
     }
 
     private void OnDestroy()
     {
-        swapEvent.MouseClick -= OnMouseClick;
+        swapEvent.SwapClick -= OnSwapClick;
     }
 
     /** updates cooldown */
@@ -40,12 +40,13 @@ public class MTPlayerAction : MonoBehaviour
             
     }
 
-    private void OnMouseClick(object sender, SwapEventArgs args)
+    private void OnSwapClick(object sender, SwapEventArgs args)
     {
         if (args.target.tag == "SwapCube" && _swapCooldown == 0)
         {
             args.target.GetComponent<SwapCubeAction>().performAction(transform);
             _swapCooldown = swapCooldown;
+            Debug.Log("JUHUU");
         }
     }
 }
