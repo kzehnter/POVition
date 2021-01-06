@@ -2,20 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Scripts.MT {
+namespace Scripts.MK {
 
-/**
+/** Event handler for CubeSwap.
+ *
  *  @author Konstantin
  *  @source Assets/SteamVR/Extras/SteamVR_LaserPointer.cs
  *
  */
-public class SwapHandler : MonoBehaviour {
+public class MK_SwapHandler : MonoBehaviour {
+    /** Event object.
+     */
     public event SwapEventHandler SwapClick;  
-
+    
+    /** Event which can be used in other classes.
+     */
     public virtual void OnSwapClick(SwapEventArgs e) {
-        if (SwapClick != null) { Debug.Log("Juhuuuuuuuu"); SwapClick(this, e); }
+        if (SwapClick != null) { SwapClick(this, e); }
     }
 
+    /** Raycast object detection.
+     *  ray from camera direction
+     *  object saved in SwapEventArgs
+     */
     void Update() {
         if (Input.GetMouseButtonDown(0)){
             Ray raycast = new Ray(transform.position, /*Camera direction*/transform.GetChild(0).forward);
@@ -24,16 +33,19 @@ public class SwapHandler : MonoBehaviour {
             if (bHit) { 
                 SwapEventArgs args = new SwapEventArgs();
                 args.target = hit.transform;
-                Debug.Log(hit.transform.name);
+                OnSwapClick(args);
             }
         }       
     }
-
 }
 
+/** List of Arguments for event.
+ */
 public struct SwapEventArgs{
     public Transform target;
 }  
 
+/** Delegate for event handler.
+ */
 public delegate void SwapEventHandler(object sender, SwapEventArgs e);
 }

@@ -9,7 +9,7 @@ using UnityEngine;
  *  Mouse for turning, W - S for moving,
  *  adjust movement in Inspector
  */
-public class PlayerMovement : MonoBehaviour
+public class MK_PlayerMovement : MonoBehaviour
 {
     /** Movement speed for player.
      *  2-5 realistic
