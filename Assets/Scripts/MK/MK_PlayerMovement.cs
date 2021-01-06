@@ -11,27 +11,19 @@ using UnityEngine;
  */
 public class MK_PlayerMovement : MonoBehaviour
 {
-    /** Movement speed for player.
-     *  2-5 realistic
-     */
+    /** Movement speed for player ca. 2-5.*/
     public float speed;
-    /** Main Camera, for vertical adjustment.
-     */
+    /** Main Camera, for vertical adjustment.*/
     public Camera camera;
-    /** Instead of rigidbody for more player options.
-     */
+    /** Instead of rigidbody for more player options.*/
     public CharacterController player;
-    /** Rotation speed, 2 is reasonable.
-     */
+    /** Rotation speed, 2 is reasonable.*/
     public float xRotSpeed;
-    /** Rotation speed, 2 is reasonable.
-     */
+    /** Rotation speed, 2 is reasonable.*/
     public float yRotSpeed;
-    /** Tracks vertical camera position.
-     */
+    /** Tracks vertical camera position.*/
     private float yRot = 0;
-    /** Used to move player to ground.
-     */
+    /** Used to move player to ground.*/
     private float gravity = 0;
 
     /** Movement at every Tick.
@@ -39,8 +31,7 @@ public class MK_PlayerMovement : MonoBehaviour
      *  Mouse for Orientation
      *  Player can move on ground, turn head and fall
      */
-    void Update()
-    {
+    void Update() {
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
         yRot -= mouseY*yRotSpeed;
