@@ -907,7 +907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1808844104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,6 +1236,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6667735257180335038, guid: 2a1c7bd7a10c44d409f91dedb292d771,
+        type: 3}
+      propertyPath: m_Name
+      value: Teleport_Area
+      objectReference: {fileID: 0}
     - target: {fileID: 6667735258078419766, guid: 2a1c7bd7a10c44d409f91dedb292d771,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1304,3 +1309,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2026809027}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2026809029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6667735258078419767, guid: 2a1c7bd7a10c44d409f91dedb292d771,
+    type: 3}
+  m_PrefabInstance: {fileID: 2026809027}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2026809030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026809029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a02e1401882905eb66700cd23475d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vr: 1
