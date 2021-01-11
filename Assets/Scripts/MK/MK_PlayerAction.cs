@@ -13,15 +13,22 @@ using Scripts.MK;
  */
 public class MK_PlayerAction : MonoBehaviour
 {
-    /** cooldown time for cube teleport.
-     */
-    [SerializeField]
-    private int swapCooldown;
+    /** cooldown time for cube teleport.*/
+    public int swapCooldown;
     private int _swapCooldown = 0;
 
-    /** event object for Mouse catching.
-     */
+    /** True if swap is happening.*/
+    private bool swapping = false;
+
+    /** event object for Mouse catching.*/
     private MK_SwapHandler swapEvent;
+
+    /** Returns true if Swap is currently happening.
+     *  Bugfix for MK_PlayerMovement
+     */
+    public bool getSwapping(){
+        return swapping;
+    }
     
     /** At scene load, for EventHandler.
      */
@@ -30,7 +37,7 @@ public class MK_PlayerAction : MonoBehaviour
         swapEvent.SwapClick += OnSwapClick;
     }
     
-    /** 
+    /**  
      */
     private void OnDestroy() {
         swapEvent.SwapClick -= OnSwapClick;
@@ -41,6 +48,7 @@ public class MK_PlayerAction : MonoBehaviour
     void FixedUpdate() {
         if (_swapCooldown > 0) {
             _swapCooldown--;
+            swapping = false;
         }
     }
 
@@ -49,6 +57,7 @@ public class MK_PlayerAction : MonoBehaviour
      */
     private void OnSwapClick(object sender, SwapEventArgs args) {
         if (args.target.tag == "SwapCube" && _swapCooldown == 0) {
+            swapping = true;
             args.target.GetComponent<SwapCubeAction>().performAction(transform);
             _swapCooldown = swapCooldown;
         }

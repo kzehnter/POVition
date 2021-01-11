@@ -12,7 +12,7 @@ public class VR_MK_Handler : MonoBehaviour {
     /** Should be True if VR, false if MK.*/
     public bool vr;
     /** All objects that belong only to a VR scene.*/
-    private String[] vrList = {"Teleporting","VR_Player","Teleport_Area"};
+    private String[] vrList = {"Teleporting","VR_Player","Teleport_Area","TeleportPoint"};
     /** All objects that belong only to a MK scene.*/
     private String[] mkList = {"MK_Player"};
 
