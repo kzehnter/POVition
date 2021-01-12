@@ -6,6 +6,8 @@ TagManager:
   tags:
   - SwapCube
   - TPgoal
+  - StartingPoint
+  - EventCamera
   layers:
   - Default
   - TransparentFX

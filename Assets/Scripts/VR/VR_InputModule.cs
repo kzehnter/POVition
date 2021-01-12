@@ -6,12 +6,13 @@ using Valve.VR;
 
 public class VR_InputModule : BaseInputModule
 {
-    public Camera m_Camera;
     public SteamVR_Input_Sources m_TargetSource;
     public SteamVR_Action_Boolean m_ClickAction;
-
+    
+    public Camera m_Camera;
     private GameObject m_CurrentObject = null;
     private PointerEventData m_Data = null;
+
 
     protected override void Awake()
     {
@@ -21,6 +22,8 @@ public class VR_InputModule : BaseInputModule
     }
     public override void Process()
     {
+
+        // UI Pointer processing
         m_Data.Reset();
         m_Data.position = new Vector2(m_Camera.pixelWidth / 2, m_Camera.pixelHeight / 2);
 
@@ -66,7 +69,7 @@ public class VR_InputModule : BaseInputModule
 
         if (data.pointerPress == pointerUpHandler)
         {
-            ExecuteEvents.Execute(data.pointerPress, data, ExecuteEvents.pointerUpHandler);
+            ExecuteEvents.Execute(data.pointerPress, data, ExecuteEvents.pointerClickHandler);
         }
 
         eventSystem.SetSelectedGameObject(null);
@@ -75,4 +78,6 @@ public class VR_InputModule : BaseInputModule
         data.pointerPress = null;
         data.rawPointerPress = null;
     }
+
+
 }
