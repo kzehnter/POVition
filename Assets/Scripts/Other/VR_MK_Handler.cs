@@ -12,20 +12,20 @@ public class VR_MK_Handler : MonoBehaviour {
     /** Should be True if VR, false if MK.*/
     public bool vr;
     /** All objects that belong only to a VR scene.*/
-    private String[] vrList = {"Teleporting","VR_Player","Teleport_Area"};
+    private String[] vrList = {"Teleporting","VR_Player","Teleport Area","TeleportPoint"};
     /** All objects that belong only to a MK scene.*/
     private String[] mkList = {"MK_Player"};
 
     /** En/Disables all objects in lists according to vr-bool.
      */
     void Awake() {    
-        foreach (String vrName in vrList) {
-            GameObject obj = GameObject.Find(vrName);
+        foreach (String name in vrList) {
+            GameObject obj = GameObject.Find(name);
             obj.SetActive(vr);
         }
-        foreach (String mkName in mkList) {
-            GameObject obj1 = GameObject.Find(mkName);
-            obj1.SetActive(!vr);
+        foreach (String name in mkList) {
+            GameObject obj = GameObject.Find(name);
+            obj.SetActive(!vr);
         }
     }
 }

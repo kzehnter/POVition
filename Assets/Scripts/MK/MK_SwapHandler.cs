@@ -11,8 +11,7 @@ namespace Scripts.MK {
  *
  */
 public class MK_SwapHandler : MonoBehaviour {
-    /** Event object.
-     */
+    /** Event object.*/
     public event SwapEventHandler SwapClick;  
     
     /** Event which can be used in other classes.
