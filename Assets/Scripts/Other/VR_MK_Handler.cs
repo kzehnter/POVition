@@ -23,5 +23,9 @@ public class VR_MK_Handler : MonoBehaviour {
             GameObject obj = GameObject.Find(name);
             obj.SetActive(!vr);
         }
+        foreach (String name in vrList) {
+            GameObject obj = GameObject.Find(name);
+            obj.SetActive(vr);
+        }
     }
 }
