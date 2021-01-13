@@ -19,12 +19,6 @@ public class VR_MK_Handler : MonoBehaviour {
     /** En/Disables all objects in lists according to vr-bool.
      */
     void Awake() {
-        foreach (String name in vrList) {
-            GameObject obj = GameObject.Find(name);
-            if (obj != null)
-                obj.SetActive(vr);
-        }
-        
         foreach (String name in mkList) {
             GameObject obj = GameObject.Find(name);
             obj.SetActive(!vr);

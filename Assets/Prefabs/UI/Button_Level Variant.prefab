@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 959095383035125647, guid: 7c845e91476f2814da5347572b335bb7,
         type: 3}
       propertyPath: m_Name
-      value: Button_Level
+      value: Button_Level Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3149005991356426329, guid: 7c845e91476f2814da5347572b335bb7,
         type: 3}

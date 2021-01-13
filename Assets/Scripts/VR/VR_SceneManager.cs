@@ -7,7 +7,6 @@ using Valve.VR.InteractionSystem;
 public class VR_SceneManager : MonoBehaviour
 {
 
-
     private void Awake()
     {
         Object.DontDestroyOnLoad(this);
