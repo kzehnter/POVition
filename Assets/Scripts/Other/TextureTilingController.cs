@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor;
 
 [ExecuteInEditMode]
 public class TextureTilingController : MonoBehaviour
@@ -8,9 +9,8 @@ public class TextureTilingController : MonoBehaviour
     public Vector3 textureToMesh = Vector3.one;
 
     private Renderer[] quads;
-
-    Vector3 prevScale = Vector3.one;
-    Vector3 prevTextureToMesh = Vector3.one;
+    private Vector3 prevScale = Vector3.one;
+    private Vector3 prevTextureToMesh = Vector3.one;
 
     void Start()
     {
@@ -18,51 +18,46 @@ public class TextureTilingController : MonoBehaviour
         prevTextureToMesh = textureToMesh;
         quads = GetComponentsInChildren<Renderer>();
 
-        this.UpdateTiling();
+        UpdateTiling();
     }
 
     void Update()
     {
         // If something has changed
         if (gameObject.transform.lossyScale != prevScale || prevTextureToMesh != textureToMesh)
-            this.UpdateTiling();
+            UpdateTiling();
 
         // Maintain previous state variables
-        this.prevScale = gameObject.transform.lossyScale;
+        prevScale = gameObject.transform.lossyScale;
         prevTextureToMesh = textureToMesh;
     }
 
     [ContextMenu("UpdateTiling")]
     void UpdateTiling()
     {
-        // Figure out texture-to-mesh width based on user set texture-to-mesh height
-        //float textureToMeshX = ((float)this.texture.width / this.texture.height) * this.textureToMeshZ;
-
         if (quads != null)
-        foreach(Renderer quad in quads)
-        {
-            switch (quad.name)
+            foreach(Renderer quad in quads)
             {
-                case "quad_x":
-                    quad.material.mainTextureScale = new Vector2(
-                        gameObject.transform.lossyScale.z / textureToMesh.z,
-                        gameObject.transform.lossyScale.y / textureToMesh.y);
+                switch (quad.name)
+                {
+                    case "quad_x":
+                        quad.sharedMaterial.mainTextureScale = new Vector2(
+                            gameObject.transform.lossyScale.z / textureToMesh.z,
+                            gameObject.transform.lossyScale.y / textureToMesh.y);
+                            break;
+                    case "quad_y":
+                        quad.sharedMaterial.mainTextureScale = new Vector2(
+                            gameObject.transform.lossyScale.x / textureToMesh.x,
+                            gameObject.transform.lossyScale.z / textureToMesh.z);
                         break;
-                case "quad_y":
-                    quad.material.mainTextureScale = new Vector2(
-                        gameObject.transform.lossyScale.x / textureToMesh.x,
-                        gameObject.transform.lossyScale.z / textureToMesh.z);
-                    break;
-                case "quad_z":
-                    quad.material.mainTextureScale = new Vector2(
-                        gameObject.transform.lossyScale.x / textureToMesh.x,
-                        gameObject.transform.lossyScale.y / textureToMesh.y);
-                    break;
-                default:
-                    break;
+                    case "quad_z":
+                        quad.sharedMaterial.mainTextureScale = new Vector2(
+                            gameObject.transform.lossyScale.x / textureToMesh.x,
+                            gameObject.transform.lossyScale.y / textureToMesh.y);
+                        break;
+                    default:
+                        break;
+                }
             }
-        }
-
-        
     }
 }

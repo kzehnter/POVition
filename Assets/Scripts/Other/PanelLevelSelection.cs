@@ -24,7 +24,6 @@ public class PanelLevelSelection : MonoBehaviour
                 levels.Add(SceneUtility.GetBuildIndexByScenePath(path));
             }
         }
-        Debug.Log(SceneUtility.GetScenePathByBuildIndex(3).TrimStart(new char[] {'/'}));
 
         LoadButtons();
     }
@@ -40,7 +39,6 @@ public class PanelLevelSelection : MonoBehaviour
             int _i = i;
             button.GetComponent<Button>().onClick.AddListener(() =>
             {
-                Debug.Log("click: " + _i + " " + levels.Count);
                 SceneManager.LoadScene(levels[_i]);
             });
             buttons.Add(button);
