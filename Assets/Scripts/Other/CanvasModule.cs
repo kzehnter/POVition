@@ -5,12 +5,6 @@ using Valve.VR;
 
 public class CanvasModule : MonoBehaviour
 {
-    /** initializes raycaster for ui events */
-    private void Awake()
-    {
-        GetComponent<Canvas>().worldCamera = GameObject.FindGameObjectWithTag("EventCamera").GetComponent<Camera>();
-    }
-
     /** activates the Panel with the specified name, disabling all others */
     public void SetActivePanel(string panelName)
     {

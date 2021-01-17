@@ -6,6 +6,15 @@ public class PlayerStartingPoint : MonoBehaviour
 {
     void Awake()
     {
-        GameObject.FindGameObjectWithTag("Player").transform.SetPositionAndRotation(transform.position, transform.rotation);
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null) {
+            player = GameObject.FindWithTag("PlayerHolder").transform.GetChild(0).gameObject;
+        }
+        if (player == null)
+            Debug.LogError("no player object was found");
+        else {
+            player.transform.SetPositionAndRotation(transform.position, transform.rotation);
+            player.SetActive(true);
+        }
     }
 }
