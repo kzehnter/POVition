@@ -15,7 +15,7 @@ public abstract class SwapCubeAction : MonoBehaviour
     {
         Vector3 pos = transform.position;
         transform.gameObject.SetActive(false);
-        transform.position = target.position + Vector3.up;
+        transform.position = target.position + Vector3.up*1.35f;
         target.position = pos;
         target.rotation *= turningRotation;
         transform.gameObject.SetActive(true);
