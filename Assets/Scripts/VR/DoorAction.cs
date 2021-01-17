@@ -6,10 +6,12 @@ public class DoorAction : MonoBehaviour
 {
     public Switch trigger;
     private Animator animator;
+    public bool initialStateOpen;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
+        animator.SetBool("isOpen", initialStateOpen);
         trigger.SwitchToggle += OnPressurePlateToggle;
     }
 
@@ -20,6 +22,7 @@ public class DoorAction : MonoBehaviour
 
     void OnPressurePlateToggle(bool triggered)
     {
-        animator.SetBool("isOpen", triggered);
+        // invert condition when initialStateOpen true
+        animator.SetBool("isOpen", triggered ^ initialStateOpen);
     }
 }
