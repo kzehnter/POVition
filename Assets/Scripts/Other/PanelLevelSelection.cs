@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,11 +11,18 @@ public class PanelLevelSelection : MonoBehaviour
 
     private List<int> levels;
     private List<RectTransform> buttons;
+    private Button button_PreviousPage, button_NextPage;
+    private int currentPage;
+    private int pageCount;
 
-    void Awake()
+    private void Awake()
     {
         levels = new List<int>();
         buttons = new List<RectTransform>();
+        button_PreviousPage = transform.Find("Button_PreviousPage").GetComponent<Button>();
+        button_NextPage = transform.Find("Button_NextPage").GetComponent<Button>();
+        currentPage = 0;
+        
         for (int i=0; i<SceneManager.sceneCountInBuildSettings; i++)
         {
             string path = SceneUtility.GetScenePathByBuildIndex(i);
@@ -24,13 +31,22 @@ public class PanelLevelSelection : MonoBehaviour
                 levels.Add(SceneUtility.GetBuildIndexByScenePath(path));
             }
         }
-
+        pageCount = (levels.Count - 1) / 10 + 1;
         LoadButtons();
     }
 
-    void LoadButtons()
+    private void LoadButtons()
     {
-        for (int i=0; i<levels.Count; i++)
+        if (buttons.Count != 0)
+        {
+            foreach (RectTransform button in buttons)
+            {
+                GameObject.Destroy(button.gameObject);
+            }
+            buttons.Clear();
+        }
+
+        for (int i=10*currentPage; i<Math.Min(levels.Count, 10*(currentPage + 1)); i++)
         {
             RectTransform button = (RectTransform) Instantiate(prefab_levelButton, transform);
             button.localPosition = new Vector3(i % 5 * 100 - 200, (i % 10) / 5 * -100 + 50, 0);
@@ -43,5 +59,27 @@ public class PanelLevelSelection : MonoBehaviour
             });
             buttons.Add(button);
         }
+    }
+
+    public void SwitchToPreviousPage()
+    {
+        if (currentPage > 0)
+            currentPage--;
+        LoadButtons();
+        if (currentPage <= 0)
+            button_PreviousPage.interactable = false;
+        if (currentPage == pageCount - 2)
+            button_NextPage.interactable = true;
+    }
+
+    public void SwitchToNextPage()
+    {
+        if (currentPage < pageCount - 1)
+            currentPage++;
+        LoadButtons();
+        if (currentPage == 1)
+            button_PreviousPage.interactable = true;
+        if (currentPage == pageCount - 1)
+            button_NextPage.interactable = false;
     }
 }

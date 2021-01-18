@@ -265,6 +265,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2099461026}
     m_Modifications:
+    - target: {fileID: 3729416511862215106, guid: 0e251a215cee4d84ba1227c3843c5c65,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2099461027}
+    - target: {fileID: 3729416511862215106, guid: 0e251a215cee4d84ba1227c3843c5c65,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActivePanel
+      objectReference: {fileID: 0}
     - target: {fileID: 5208407037120411842, guid: 0e251a215cee4d84ba1227c3843c5c65,
         type: 3}
       propertyPath: m_Name
@@ -734,6 +744,7 @@ GameObject:
   - component: {fileID: 2099461024}
   - component: {fileID: 2099461023}
   - component: {fileID: 2099461027}
+  - component: {fileID: 2099461028}
   m_Layer: 0
   m_Name: MainCanvas
   m_TagString: Untagged
@@ -832,5 +843,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 838ea0192c60a5248b6ace2bce92b27f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2099461028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099461022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eabc8ced5481d2a42b617897b90fa69e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
