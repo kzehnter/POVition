@@ -205,6 +205,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1434955061}
+    - target: {fileID: 1855052830519240543, guid: f3ff64a2598738b45a3de567958d7f1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadGameScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855052830519240543, guid: f3ff64a2598738b45a3de567958d7f1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855052830519240543, guid: f3ff64a2598738b45a3de567958d7f1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: VR_Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606834726226946180, guid: f3ff64a2598738b45a3de567958d7f1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3ff64a2598738b45a3de567958d7f1a, type: 3}
 --- !u!1001 &1656877277433031068

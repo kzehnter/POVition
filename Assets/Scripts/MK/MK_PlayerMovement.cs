@@ -38,10 +38,12 @@ public class MK_PlayerMovement : MonoBehaviour
             yRot -= mouseY*yRotSpeed;
             camera.transform.localRotation = Quaternion.Euler(yRot, 0, 0);
             transform.Rotate(0, mouseX*xRotSpeed, 0); 
-            gravity -= 9.81f * Time.deltaTime;
+            // 12f feels better than 9.81
+            gravity -= 12f * Time.deltaTime;
         
             // lock mouse to game window
-            if (Input.GetMouseButtonDown(0)) { Cursor.lockState = CursorLockMode.Locked; }
+            //if (Input.GetMouseButtonDown(0))
+            Cursor.lockState = CursorLockMode.Locked;
             Vector3 move = new Vector3(Input.GetAxis("Horizontal"), gravity, Input.GetAxis("Vertical"));
             player.Move((transform.rotation * move.normalized * speed) * Time.deltaTime);
             if (player.isGrounded){gravity = 0;}

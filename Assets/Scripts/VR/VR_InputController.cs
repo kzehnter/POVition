@@ -12,14 +12,17 @@ public class VR_InputController : MonoBehaviour
     [SerializeField]
     private int swapCooldown;
     private int _swapCooldown = 0;
-
+    
+    /**   */
     private SteamVR_LaserPointer laserPointer;
+    /**   */
     public SteamVR_Input_Sources m_TargetSource;
+    /**   */
     public SteamVR_Action_Boolean m_OpenMenu;
-
+    /**   */
     private Canvas pauseMenuCanvas;
 
-    /** adds callback to laser pointer click event */
+    /** adds callback to laser pointer click event. */
     private void Awake()
     {
         laserPointer = GetComponentInChildren<SteamVR_LaserPointer>();
@@ -27,13 +30,13 @@ public class VR_InputController : MonoBehaviour
         pauseMenuCanvas = GetComponentInChildren<Canvas>(true);
     }
 
-    /** removes all event callbacks */
+    /** removes all event callbacks. */
     private void OnDestroy()
     {
         laserPointer.PointerClick -= OnPointerClick;
     }
 
-    /** updates cooldown, toggles menu */
+    /** updates cooldown, toggles menu. */
     void FixedUpdate()
     {
         if (_swapCooldown > 0)
@@ -57,7 +60,9 @@ public class VR_InputController : MonoBehaviour
             _swapCooldown = swapCooldown;
         }
     }
-
+    
+    /** 
+     */
     public void SetPauseMenu(bool isOpen)
     {
         pauseMenuCanvas.gameObject.SetActive(isOpen);

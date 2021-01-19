@@ -30,14 +30,14 @@ public class MK_PlayerAction : MonoBehaviour
         return swapping;
     }
     
-    /** At scene load, for EventHandler.
+    /** Adds callback to Swapclick event.
      */
     private void Awake() {
         swapEvent = GetComponentInChildren<MK_SwapHandler>();
         swapEvent.SwapClick += OnSwapClick;
     }
     
-    /**  
+    /** Remove Event if player gets destroyed.  
      */
     private void OnDestroy() {
         swapEvent.SwapClick -= OnSwapClick;
