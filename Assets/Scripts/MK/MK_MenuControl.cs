@@ -18,13 +18,13 @@ public class MK_MenuControl : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            SetPauseMenu();
+            TogglePauseMenu();
         }
     }
     
     /** Opens or closes Menu, stops time.
      */
-    public void SetPauseMenu(){ 
+    public void TogglePauseMenu(){ 
         if (!paused) {
             panel.SetActive(true);
             crosshair.SetActive(false);
@@ -33,10 +33,17 @@ public class MK_MenuControl : MonoBehaviour
             paused = true;
         } else {
             panel.SetActive(false);
-            crosshair.SetActive(true);
             Time.timeScale = 1;
-            Cursor.lockState = CursorLockMode.Locked;
             paused = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            crosshair.SetActive(true);
         }
+    }
+    public void ReturnToMenu()
+    {
+        panel.SetActive(false);
+        Time.timeScale = 1;
+        paused = false;
+        crosshair.SetActive(true);
     }
 }

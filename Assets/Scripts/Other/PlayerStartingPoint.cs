@@ -16,7 +16,7 @@ public class PlayerStartingPoint : MonoBehaviour
             Debug.LogError("no player object was found");
         else {
             player.transform.SetPositionAndRotation(transform.position, transform.rotation);
-            if (mk) player.transform.position += new Vector3(0,1,0); 
+            if (mk) player.transform.position += Vector3.up;
             player.SetActive(true);
         }
     }
