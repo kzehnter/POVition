@@ -9,10 +9,9 @@ using UnityEngine.UI;
  */
 public class SwapCubeAction_Timer : SwapCubeAction
 {
-    [SerializeField]
     /** Time in seconds between swaps.
      */
-    private int delayTime;
+    public int delayTime;
 
     public Text[] textList;
     private bool running = false;

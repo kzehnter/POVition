@@ -9,9 +9,8 @@ using UnityEngine.UI;
  */
 public class SwapCubeAction_Count : SwapCubeAction
 {
-    [SerializeField]
     /** Amount of times a swap will be possible.*/
-    private int countNr;
+    public int countNr;
     
     /** All texts on cube. */
     public Text[] textList;

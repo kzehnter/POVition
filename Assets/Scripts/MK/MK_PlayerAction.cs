@@ -17,18 +17,12 @@ public class MK_PlayerAction : MonoBehaviour
     public int swapCooldown;
     private int _swapCooldown = 0;
 
-    /** True if swap is happening.*/
-    private bool swapping = false;
+    /** True if swap is happening.
+     *  Usable from other scripts */
+    public static bool swapping = false;
 
     /** event object for Mouse catching.*/
     private MK_SwapHandler swapEvent;
-
-    /** Returns true if Swap is currently happening.
-     *  Bugfix for MK_PlayerMovement
-     */
-    public bool getSwapping(){
-        return swapping;
-    }
     
     /** Adds callback to Swapclick event.
      */

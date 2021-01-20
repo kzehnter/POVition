@@ -230,6 +230,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6534782584846742644, guid: 6771656e63ce2f24b9ff32a801eaee1a,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534782584846742644, guid: 6771656e63ce2f24b9ff32a801eaee1a,
+        type: 3}
       propertyPath: m_Navigation.m_Mode
       value: 3
       objectReference: {fileID: 0}
@@ -257,6 +262,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
       value: 0.7490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534782584846742644, guid: 6771656e63ce2f24b9ff32a801eaee1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534782584846742644, guid: 6771656e63ce2f24b9ff32a801eaee1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534782584846742644, guid: 6771656e63ce2f24b9ff32a801eaee1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1976249756}
+    - target: {fileID: 6534782584846742644, guid: 6771656e63ce2f24b9ff32a801eaee1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534782584846742644, guid: 6771656e63ce2f24b9ff32a801eaee1a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6806520526902687932, guid: 6771656e63ce2f24b9ff32a801eaee1a,
         type: 3}
@@ -801,7 +831,7 @@ PrefabInstance:
     - target: {fileID: 1699058914539550600, guid: 6545813548940515e90a753a1a41d8ae,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1699058914539550600, guid: 6545813548940515e90a753a1a41d8ae,
         type: 3}
@@ -916,7 +946,17 @@ PrefabInstance:
     - target: {fileID: 2969816867289507814, guid: 6545813548940515e90a753a1a41d8ae,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969816867289507818, guid: 6545813548940515e90a753a1a41d8ae,
+        type: 3}
+      propertyPath: m_SkinWidth
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969816867289507818, guid: 6545813548940515e90a753a1a41d8ae,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2969816867289507821, guid: 6545813548940515e90a753a1a41d8ae,
         type: 3}
@@ -927,6 +967,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969816867289507821, guid: 6545813548940515e90a753a1a41d8ae,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2969816867779923659, guid: 6545813548940515e90a753a1a41d8ae,
         type: 3}
@@ -1077,18 +1122,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 963253607}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &963253624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963253608}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55b1edb7c32f842cdae27f8e85cae200, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1197792686 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2829332305949922442, guid: 6771656e63ce2f24b9ff32a801eaee1a,

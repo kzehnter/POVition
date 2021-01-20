@@ -36,7 +36,7 @@ public class MK_PlayerMovement : MonoBehaviour
      *  Player can move on ground, turn head and fall
      */
     void Update() {
-        if (!transform.GetComponent<MK_PlayerAction>().getSwapping() && !MK_MenuControl.paused) {
+        if (!MK_PlayerAction.swapping && !MK_MenuControl.paused) {
               
             // Mouselook
             float mouseX = Input.GetAxis("Mouse X");

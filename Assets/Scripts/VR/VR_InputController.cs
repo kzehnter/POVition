@@ -9,8 +9,7 @@ using Valve.VR.Extras;
 public class VR_InputController : MonoBehaviour
 {
     /** cooldown time for cube teleport */
-    [SerializeField]
-    private int swapCooldown;
+    public int swapCooldown;
     private int _swapCooldown = 0;
     
     /**   */
