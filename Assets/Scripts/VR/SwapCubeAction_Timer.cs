@@ -49,7 +49,9 @@ public class SwapCubeAction_Timer : SwapCubeAction
      *  Startet by OnPointerClick in PlayerAction
      */
     public override void performAction(Transform target) {
-        performSwap(target);
-        StartCoroutine(waiter(target));
+        if (!running) {
+            performSwap(target);
+            StartCoroutine(waiter(target));
+        }
     }
 }
