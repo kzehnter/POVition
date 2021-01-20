@@ -37,6 +37,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Back
       objectReference: {fileID: 0}
+    - target: {fileID: 3149005991356426329, guid: 7c845e91476f2814da5347572b335bb7,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3873914679437055912, guid: 7c845e91476f2814da5347572b335bb7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -325,7 +330,12 @@ PrefabInstance:
     - target: {fileID: 3149005991356426329, guid: 7c845e91476f2814da5347572b335bb7,
         type: 3}
       propertyPath: m_Text
-      value: "\u25C4"
+      value: "\u25C4\u25C4\u25C4\u25C4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149005991356426329, guid: 7c845e91476f2814da5347572b335bb7,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3873914679437055912, guid: 7c845e91476f2814da5347572b335bb7,
         type: 3}
@@ -486,6 +496,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: "\u25BA"
       objectReference: {fileID: 0}
+    - target: {fileID: 3149005991356426329, guid: 7c845e91476f2814da5347572b335bb7,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3873914679437055912, guid: 7c845e91476f2814da5347572b335bb7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -639,6 +654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Level Selection
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652222530316130666, guid: 9885e9c69cc01b9408aba1bd5780392f,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4694925473796956021, guid: 9885e9c69cc01b9408aba1bd5780392f,
         type: 3}

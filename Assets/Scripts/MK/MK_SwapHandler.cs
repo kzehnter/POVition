@@ -25,7 +25,7 @@ public class MK_SwapHandler : MonoBehaviour {
      *  object saved in SwapEventArgs
      */
     void Update() {
-        if (Input.GetMouseButtonDown(0)){
+        if (Input.GetMouseButtonDown(0) && !MK_MenuControl.paused){
             Ray raycast = new Ray(transform.position, /*Camera direction*/transform.GetChild(0).forward);
             RaycastHit hit;
             bool bHit = Physics.Raycast(raycast, out hit);

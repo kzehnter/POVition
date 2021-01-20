@@ -26,24 +26,28 @@ public class MK_PlayerMovement : MonoBehaviour
     /** Used to move player to ground.*/
     private float gravity = 0;
 
+    void OnEnable() {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     /** Movement at every Tick.
      *  Character Controller used for movement
      *  Mouse for Orientation
      *  Player can move on ground, turn head and fall
      */
     void Update() {
-        if (!transform.GetComponent<MK_PlayerAction>().getSwapping()) {
+        if (!transform.GetComponent<MK_PlayerAction>().getSwapping() && !MK_MenuControl.paused) {
+              
+            // Mouselook
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
             yRot -= mouseY*yRotSpeed;
             camera.transform.localRotation = Quaternion.Euler(yRot, 0, 0);
             transform.Rotate(0, mouseX*xRotSpeed, 0); 
+            
+            //Movement
             // 12f feels better than 9.81
             gravity -= 12f * Time.deltaTime;
-        
-            // lock mouse to game window
-            //if (Input.GetMouseButtonDown(0))
-            Cursor.lockState = CursorLockMode.Locked;
             Vector3 move = new Vector3(Input.GetAxis("Horizontal"), gravity, Input.GetAxis("Vertical"));
             player.Move((transform.rotation * move.normalized * speed) * Time.deltaTime);
             if (player.isGrounded){gravity = 0;}

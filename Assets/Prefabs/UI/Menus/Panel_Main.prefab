@@ -17,6 +17,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Play
       objectReference: {fileID: 0}
+    - target: {fileID: 3149005991356426329, guid: 7c845e91476f2814da5347572b335bb7,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4256460668129097434, guid: 7c845e91476f2814da5347572b335bb7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -266,6 +271,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Options
       objectReference: {fileID: 0}
+    - target: {fileID: 3149005991356426329, guid: 7c845e91476f2814da5347572b335bb7,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4256460668129097434, guid: 7c845e91476f2814da5347572b335bb7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -390,6 +400,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 3149005991356426329, guid: 7c845e91476f2814da5347572b335bb7,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4256460668129097434, guid: 7c845e91476f2814da5347572b335bb7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -513,6 +528,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: P O V I T I O N
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652222530316130666, guid: 9885e9c69cc01b9408aba1bd5780392f,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4694925473796956021, guid: 9885e9c69cc01b9408aba1bd5780392f,
         type: 3}

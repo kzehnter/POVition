@@ -11,7 +11,7 @@ public class MK_MenuControl : MonoBehaviour
     /** Player off in Menu */
     public GameObject player;
     /** Status of menu. */  
-    private bool opened = false;
+    public static bool paused = false;
     
     /** Checks for Escape key and uses SetPauseMenu.
      */
@@ -25,18 +25,18 @@ public class MK_MenuControl : MonoBehaviour
     /** Opens or closes Menu, stops time.
      */
     public void SetPauseMenu(){ 
-        if (!opened) {
+        if (!paused) {
             panel.SetActive(true);
             crosshair.SetActive(false);
             Time.timeScale = 0;
-            player.SetActive(false);
-            opened = true;
+            Cursor.lockState = CursorLockMode.None;
+            paused = true;
         } else {
             panel.SetActive(false);
             crosshair.SetActive(true);
             Time.timeScale = 1;
-            player.SetActive(true);
-            opened = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            paused = false;
         }
     }
 }
