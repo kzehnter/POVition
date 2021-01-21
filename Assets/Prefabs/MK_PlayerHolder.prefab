@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 276002062407958680}
   - component: {fileID: 9160568421459950482}
   - component: {fileID: 7694263097482956933}
-  - component: {fileID: 333333872694768504}
   m_Layer: 5
   m_Name: Pause_Canvas
   m_TagString: Untagged
@@ -100,21 +99,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &333333872694768504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2781412106526419999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa729973c4e233cbe8732eabce1768ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 349709637324164348}
-  crosshair: {fileID: 2969816866456173663}
-  player: {fileID: 2969816867289507814}
 --- !u!1 &2969816866456173663
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,13 +285,14 @@ GameObject:
   - component: {fileID: 2969816867289507819}
   - component: {fileID: 2969816867289507816}
   - component: {fileID: 2969816867289507817}
+  - component: {fileID: 3549634804231220943}
   m_Layer: 0
   m_Name: MK_Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2969816867289507821
 Transform:
   m_ObjectHideFlags: 0
@@ -383,6 +368,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c7d1aa287d7ee558efe2c2d3f5753e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3549634804231220943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2969816867289507814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa729973c4e233cbe8732eabce1768ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 349709637324164348}
+  crosshair: {fileID: 2969816866456173663}
+  player: {fileID: 2969816867289507814}
 --- !u!1 &2969816867779923656
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +515,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 333333872694768504}
+      objectReference: {fileID: 0}
     - target: {fileID: 1136932314074738585, guid: a373956706c4b784181d2853966825b6,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -735,7 +735,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 333333872694768504}
+      objectReference: {fileID: 0}
     - target: {fileID: 6032594638985240499, guid: a373956706c4b784181d2853966825b6,
         type: 3}
       propertyPath: m_Text

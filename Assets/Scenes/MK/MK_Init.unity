@@ -121,18 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &608148649 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 333333872694768504, guid: 6545813548940515e90a753a1a41d8ae,
-    type: 3}
-  m_PrefabInstance: {fileID: 963253607}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa729973c4e233cbe8732eabce1768ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &679453099
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +193,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 963253607}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &717860570 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3549634804231220943, guid: 6545813548940515e90a753a1a41d8ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 963253607}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717860569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa729973c4e233cbe8732eabce1768ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &963253607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -356,11 +356,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 608148649}
+      objectReference: {fileID: 717860570}
     - target: {fileID: 1762528423730724542, guid: 6545813548940515e90a753a1a41d8ae,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LockCursor
+      value: TogglePauseMenu
       objectReference: {fileID: 0}
     - target: {fileID: 1762528423730724542, guid: 6545813548940515e90a753a1a41d8ae,
         type: 3}
@@ -376,7 +376,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 608148649}
+      objectReference: {fileID: 0}
     - target: {fileID: 1762528423730724542, guid: 6545813548940515e90a753a1a41d8ae,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -546,7 +546,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 608148649}
+      objectReference: {fileID: 717860570}
     - target: {fileID: 6519958636824490341, guid: 6545813548940515e90a753a1a41d8ae,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
