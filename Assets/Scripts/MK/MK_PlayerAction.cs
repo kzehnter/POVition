@@ -14,7 +14,7 @@ using Scripts.MK;
 public class MK_PlayerAction : MonoBehaviour
 {
     /** cooldown time for cube teleport.*/
-    public static int swapCooldown;
+    public int swapCooldown;
     private int _swapCooldown = 0;
 
     /** True if swap is happening.
