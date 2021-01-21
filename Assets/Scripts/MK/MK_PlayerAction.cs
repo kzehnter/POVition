@@ -7,14 +7,14 @@ using Scripts.MK;
 /** MK Variant of PlayerAction. 
  *
  *  @author Eduard
- *  adjusted by Konstantin
+ *  @author Konstantin
  *
  *  Event system for Player
  */
 public class MK_PlayerAction : MonoBehaviour
 {
     /** cooldown time for cube teleport.*/
-    public int swapCooldown;
+    public static int swapCooldown;
     private int _swapCooldown = 0;
 
     /** True if swap is happening.

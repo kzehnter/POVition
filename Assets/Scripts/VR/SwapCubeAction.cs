@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ *
+ *  @author Eduard
+ */
 public abstract class SwapCubeAction : MonoBehaviour
 {
     /** quaternion for turning the player around after teleporting */
@@ -10,7 +14,7 @@ public abstract class SwapCubeAction : MonoBehaviour
     /** performs a given action when triggered by a laser pointer */
     public abstract void performAction(Transform target);
 
-    /** swaps this and target transform in their position */
+    /** swaps this and target (player) transform in their position */
     public void performSwap(Transform target)
     {
         Vector3 pos = transform.position;
