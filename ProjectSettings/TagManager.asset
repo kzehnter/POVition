@@ -8,6 +8,7 @@ TagManager:
   - StartingPoint
   - EventCamera
   - PlayerHolder
+  - VR_Teleportation
   layers:
   - Default
   - TransparentFX
