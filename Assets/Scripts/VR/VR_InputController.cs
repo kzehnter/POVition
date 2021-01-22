@@ -19,14 +19,13 @@ public class VR_InputController : MonoBehaviour
     /**   */
     public SteamVR_Action_Boolean m_OpenMenu;
     /**   */
-    private Canvas pauseMenuCanvas;
+    public Canvas pauseCanvas;
 
     /** adds callback to laser pointer click event. */
     private void Awake()
     {
         laserPointer = GetComponentInChildren<SteamVR_LaserPointer>();
         laserPointer.PointerClick += OnPointerClick;
-        pauseMenuCanvas = GetComponentInChildren<Canvas>(true);
     }
 
     /** removes all event callbacks. */
@@ -45,7 +44,8 @@ public class VR_InputController : MonoBehaviour
 
         if (m_OpenMenu.GetLastStateUp(m_TargetSource))
         {
-            SetPauseMenu(!pauseMenuCanvas.gameObject.activeSelf);
+            SetPauseMenu(!pauseCanvas.gameObject.activeSelf);
+
         }
     }
 
@@ -64,6 +64,8 @@ public class VR_InputController : MonoBehaviour
      */
     public void SetPauseMenu(bool isOpen)
     {
-        pauseMenuCanvas.gameObject.SetActive(isOpen);
+        pauseCanvas.gameObject.SetActive(isOpen);
+        if (isOpen)
+            pauseCanvas.GetComponent<CanvasModule>().SetActivePanel("Panel_Pause");
     }
 }

@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class GoalBehaviour : MonoBehaviour
 {
+    public string goalColliderName;
+    public Canvas pauseCanvas;
+
     void OnTriggerEnter(Collider other) {
-        if (other.tag == "Player") {
-            
+        if (other.gameObject.name == goalColliderName)
+        {
+            pauseCanvas.gameObject.SetActive(true);
+            pauseCanvas.GetComponent<CanvasModule>().SetActivePanel("Panel_Done");
         }
     }
 }

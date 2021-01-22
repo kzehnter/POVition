@@ -11,7 +11,7 @@ public class PanelLevelSelection : MonoBehaviour
 
     private List<int> levels;
     private List<RectTransform> buttons;
-    private Button button_PreviousPage, button_NextPage;
+    public Button button_PreviousPage, button_NextPage;
     private int currentPage;
     private int pageCount;
 
@@ -19,8 +19,6 @@ public class PanelLevelSelection : MonoBehaviour
     {
         levels = new List<int>();
         buttons = new List<RectTransform>();
-        button_PreviousPage = transform.Find("Button_PreviousPage").GetComponent<Button>();
-        button_NextPage = transform.Find("Button_NextPage").GetComponent<Button>();
         currentPage = 0;
         
         for (int i=0; i<SceneManager.sceneCountInBuildSettings; i++)

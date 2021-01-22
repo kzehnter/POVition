@@ -10,10 +10,8 @@ public class VR_InteractionLock : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("collider: " + other.gameObject.name);
         if (other.gameObject.GetComponentInParent<HandCollider>() == null)
         {
-            Debug.Log("is not part of controller: " + other.gameObject.name);
             SetTeleportationLock(true);
             raycaster.SetActive(false);
         }
@@ -21,10 +19,8 @@ public class VR_InteractionLock : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("collider: " + other.gameObject.name);
         if (other.gameObject.GetComponentInParent<HandCollider>() == null)
         {
-            Debug.Log("is not part of controller: " + other.gameObject.name);
             SetTeleportationLock(false);
             raycaster.SetActive(true);
         }
