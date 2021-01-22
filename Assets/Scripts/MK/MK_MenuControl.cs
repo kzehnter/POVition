@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/** Handels pause menu in Levels.
+ *  
+ *  @author Konstantin
+ */
 public class MK_MenuControl : MonoBehaviour
 {
     /** Pause-menu. */
@@ -10,7 +14,8 @@ public class MK_MenuControl : MonoBehaviour
     public GameObject crosshair;
     /** Player off in Menu */
     public GameObject player;
-    /** Status of menu. */  
+    /** Status of menu. 
+     *  could be used by other scripts */  
     public static bool paused = false;
     
     /** Checks for Escape key and uses SetPauseMenu.
@@ -22,7 +27,7 @@ public class MK_MenuControl : MonoBehaviour
         }
     }
     
-    /** Opens or closes Menu, stops time.
+    /** Opens or closes Menu, stops time, handels cursor.
      */
     public void TogglePauseMenu(){ 
         if (!paused) {
@@ -33,12 +38,15 @@ public class MK_MenuControl : MonoBehaviour
             paused = true;
         } else {
             panel.SetActive(false);
-            Time.timeScale = 1;
-            paused = false;
-            Cursor.lockState = CursorLockMode.Locked;
             crosshair.SetActive(true);
+            Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.Locked;
+            paused = false;
         }
     }
+    
+    /** Doesnt lock cursor and crosshair stays off.
+     */
     public void ReturnToMenu()
     {
         panel.SetActive(false);

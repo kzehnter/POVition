@@ -25,7 +25,8 @@ public class MK_PlayerMovement : MonoBehaviour
     private float yRot = 0;
     /** Used to move player to ground.*/
     private float gravity = 0;
-
+    
+    /** lock cursor on scene start or after closing pause menu.*/
     void OnEnable() {
         Cursor.lockState = CursorLockMode.Locked;
     }

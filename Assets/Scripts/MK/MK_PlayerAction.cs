@@ -7,7 +7,7 @@ using Scripts.MK;
 /** MK Variant of PlayerAction. 
  *
  *  @author Eduard
- *  adjusted by Konstantin
+ *  @author Konstantin
  *
  *  Event system for Player
  */
