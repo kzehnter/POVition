@@ -14,7 +14,7 @@ public class MK_PlayerMovement : MonoBehaviour
     /** Movement speed for player ca. 2-5.*/
     public float speed;
     /** Main Camera, for vertical adjustment.*/
-    public Camera camera;
+    public Camera cam;
     /** Instead of rigidbody for more player options.*/
     public CharacterController player;
     /** Rotation speed, 2 is reasonable.*/
@@ -43,7 +43,7 @@ public class MK_PlayerMovement : MonoBehaviour
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
             yRot -= mouseY*yRotSpeed;
-            camera.transform.localRotation = Quaternion.Euler(yRot, 0, 0);
+            cam.transform.localRotation = Quaternion.Euler(yRot, 0, 0);
             transform.Rotate(0, mouseX*xRotSpeed, 0); 
             
             //Movement
