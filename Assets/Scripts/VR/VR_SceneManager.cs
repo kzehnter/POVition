@@ -13,7 +13,9 @@ public class VR_SceneManager : MonoBehaviour
 
     private void Awake()
     {
-        Object.DontDestroyOnLoad(this);
+        foreach(GameObject obj in SceneManager.GetActiveScene().GetRootGameObjects())
+            Object.DontDestroyOnLoad(obj);
+
         LoadGameScene("VR_Menu");
     }
 

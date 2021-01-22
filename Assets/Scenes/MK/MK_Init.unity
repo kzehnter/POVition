@@ -492,6 +492,11 @@ PrefabInstance:
       propertyPath: near clip plane
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 2969816867779923659, guid: 6545813548940515e90a753a1a41d8ae,
+        type: 3}
+      propertyPath: m_TargetEye
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3315719325487907783, guid: 6545813548940515e90a753a1a41d8ae,
         type: 3}
       propertyPath: m_AnchoredPosition.y
