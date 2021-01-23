@@ -17,6 +17,21 @@ PrefabInstance:
       propertyPath: m_Text
       value: Next Level
       objectReference: {fileID: 0}
+    - target: {fileID: 3873914679437055912, guid: 7c845e91476f2814da5347572b335bb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873914679437055912, guid: 7c845e91476f2814da5347572b335bb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873914679437055912, guid: 7c845e91476f2814da5347572b335bb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4256460668129097434, guid: 7c845e91476f2814da5347572b335bb7,
         type: 3}
       propertyPath: m_LocalPosition.x

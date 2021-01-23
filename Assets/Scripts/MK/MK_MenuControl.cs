@@ -8,12 +8,12 @@ using UnityEngine;
  */
 public class MK_MenuControl : MonoBehaviour
 {
-    /** Pause-menu. */
-    public GameObject panel;
-    /** Off in menu screen. */
-    public GameObject crosshair;
-    /** Player off in Menu */
-    public GameObject player;
+    /** Holds all in Level panels.*/
+    public Canvas levelCanvas;
+    
+    /** Normally "Goal Cube".*/
+    public string goalColliderName;
+
     /** Status of menu. 
      *  could be used by other scripts */  
     public static bool paused = false;
@@ -23,35 +23,39 @@ public class MK_MenuControl : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            TogglePauseMenu();
+            ToggleMenu("Panel_Pause");
+        }
+    }
+
+    void OnTriggerEnter(Collider other) {
+        if (other.gameObject.name == goalColliderName) {
+            ToggleMenu("Panel_Done");
         }
     }
     
     /** Opens or closes Menu, stops time, handels cursor.
+     *  Takes string names of panels
      */
-    public void TogglePauseMenu(){ 
+    public void ToggleMenu(string name){ 
         if (!paused) {
-            panel.SetActive(true);
-            crosshair.SetActive(false);
+            levelCanvas.GetComponent<CanvasModule>().SetActivePanel(name);
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             paused = true;
         } else {
-            panel.SetActive(false);
-            crosshair.SetActive(true);
+            levelCanvas.GetComponent<CanvasModule>().SetActivePanel("Panel_UI");
             Time.timeScale = 1;
             Cursor.lockState = CursorLockMode.Locked;
             paused = false;
         }
     }
     
-    /** Doesnt lock cursor and crosshair stays off.
+    /** Toggles pause menu but doesnt lock cursor.
      */
     public void ReturnToMenu()
     {
-        panel.SetActive(false);
+        levelCanvas.GetComponent<CanvasModule>().SetActivePanel("Panel_UI");
         Time.timeScale = 1;
         paused = false;
-        crosshair.SetActive(true);
     }
 }
