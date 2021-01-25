@@ -48,7 +48,7 @@ public class MK_PlayerMovement : MonoBehaviour
             
             //Movement
             // 12f feels better than 9.81
-            gravity -= 12f * Time.deltaTime;
+            gravity -= 15f * Time.deltaTime;
             Vector3 move = new Vector3(Input.GetAxis("Horizontal"), gravity, Input.GetAxis("Vertical"));
             player.Move((transform.rotation * move.normalized * speed) * Time.deltaTime);
             if (player.isGrounded){gravity = 0;}

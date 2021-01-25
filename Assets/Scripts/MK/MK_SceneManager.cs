@@ -42,7 +42,6 @@ public class MK_SceneManager : MonoBehaviour
         GameObject player = playerHolder.transform.GetChild(0).gameObject;
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings) {
             Cursor.lockState = CursorLockMode.Locked;
-            player.SetActive(true);
             SceneManager.LoadScene(nextSceneIndex);
             player.SetActive(false);
         } else {
