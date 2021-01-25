@@ -7,29 +7,19 @@ using UnityEngine.UI;
 public class PanelLevelSelection : MonoBehaviour
 {
     public Transform prefab_levelButton;
-    public string scenePathPrefix;
-
-    private List<int> levels;
-    private List<RectTransform> buttons;
     public Button button_PreviousPage, button_NextPage;
+    
+    private List<RectTransform> buttons;
     private int currentPage;
     private int pageCount;
+    private PersistenceController persistenceController;
 
     private void Awake()
     {
-        levels = new List<int>();
+        persistenceController = GameObject.Find("PersistenceController").GetComponent<PersistenceController>();
         buttons = new List<RectTransform>();
         currentPage = 0;
-        
-        for (int i=0; i<SceneManager.sceneCountInBuildSettings; i++)
-        {
-            string path = SceneUtility.GetScenePathByBuildIndex(i);
-            if (path.Contains(scenePathPrefix))
-            {
-                levels.Add(SceneUtility.GetBuildIndexByScenePath(path));
-            }
-        }
-        pageCount = (levels.Count - 1) / 10 + 1;
+        pageCount = (persistenceController.Levels.Count - 1) / 10 + 1;
         LoadButtons();
     }
 
@@ -44,16 +34,25 @@ public class PanelLevelSelection : MonoBehaviour
             buttons.Clear();
         }
 
-        for (int i=10*currentPage; i<Math.Min(levels.Count, 10*(currentPage + 1)); i++)
+        for (int i=10*currentPage; i<Math.Min(persistenceController.Levels.Count, 10*(currentPage + 1)); i++)
         {
             RectTransform button = (RectTransform) Instantiate(prefab_levelButton, transform);
             button.localPosition = new Vector3(i % 5 * 100 - 200, (i % 10) / 5 * -100 + 50, 0);
-            button.GetComponentInChildren<Text>().text = (i+1).ToString();
+            if (persistenceController.Levels[persistenceController.Levels.Keys[i]])
+            {
+                button.GetComponentInChildren<Text>().text = (i+1).ToString();
+            }
+            else
+            {
+                button.GetComponent<Button>().interactable = false;
+                button.GetComponentInChildren<RawImage>(true).enabled = true;
+            }
 
             int _i = i;
             button.GetComponent<Button>().onClick.AddListener(() =>
             {
-                SceneManager.LoadScene(levels[_i]);
+                Debug.Log(_i);
+                SceneManager.LoadScene(persistenceController.Levels.Keys[_i]);
             });
             buttons.Add(button);
         }

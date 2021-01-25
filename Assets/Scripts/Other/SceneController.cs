@@ -15,6 +15,12 @@ public abstract class SceneController : MonoBehaviour
             DontDestroyOnLoad(obj);
         }
         LoadMenuScene();
+
+        SceneManager.sceneLoaded += (Scene s, LoadSceneMode sm) =>
+        {
+            Debug.Log("test");
+            teleportationController.InitializeTeleportation();
+        };
     }
 
     public void LoadScene(string sceneName)
@@ -44,12 +50,5 @@ public abstract class SceneController : MonoBehaviour
         {
             LoadMenuScene();
         }
-    }
-
-
-    private void OnLevelWasLoaded(int level)
-    {
-        Debug.Log("test");
-        teleportationController.InitializeTeleportation();
     }
 }
