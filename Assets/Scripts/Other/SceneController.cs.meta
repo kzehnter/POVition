@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: f41c1f46182bc4440ab2c375042d0085
+guid: 7ac2bdeb1d8065f49b3819d0d6fc9ea3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - vrTeleportation: {fileID: 475244, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

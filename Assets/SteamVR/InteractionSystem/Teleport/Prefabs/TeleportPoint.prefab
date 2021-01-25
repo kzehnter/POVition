@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locked: 0
-  markerActive: 0
+  markerActive: 1
   teleportType: 0
   title: 
   switchToScene: 

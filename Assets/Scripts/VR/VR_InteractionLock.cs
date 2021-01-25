@@ -7,6 +7,12 @@ using Valve.VR.InteractionSystem;
 public class VR_InteractionLock : MonoBehaviour
 {
     public GameObject raycaster;
+    public TeleportationController teleportationController;
+
+    private void Awake()
+    {
+        
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -28,9 +34,8 @@ public class VR_InteractionLock : MonoBehaviour
 
     private void SetTeleportationLock(bool isLocked)
     {
-        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("VR_Teleportation"))
+        foreach (GameObject obj in teleportationController.TeleportationMarkers)
         {
-            Debug.Log(obj.name);
             obj.GetComponent<TeleportMarkerBase>().SetLocked(isLocked);
         }
     }

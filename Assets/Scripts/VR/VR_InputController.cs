@@ -35,7 +35,7 @@ public class VR_InputController : MonoBehaviour
     }
 
     /** updates cooldown, toggles menu. */
-    void FixedUpdate()
+    void Update()
     {
         if (_swapCooldown > 0)
         {
@@ -45,7 +45,6 @@ public class VR_InputController : MonoBehaviour
         if (m_OpenMenu.GetLastStateUp(m_TargetSource))
         {
             SetPauseMenu(!pauseCanvas.gameObject.activeSelf);
-
         }
     }
 
@@ -60,9 +59,7 @@ public class VR_InputController : MonoBehaviour
         }
     }
     
-    /** 
-     */
-    public void SetPauseMenu(bool isOpen)
+    private void SetPauseMenu(bool isOpen)
     {
         pauseCanvas.gameObject.SetActive(isOpen);
         if (isOpen)
