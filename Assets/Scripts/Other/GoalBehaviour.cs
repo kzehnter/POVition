@@ -18,8 +18,13 @@ public class GoalBehaviour : MonoBehaviour
         if (other.gameObject.name == goalColliderName)
         {
             pauseCanvas.gameObject.SetActive(true);
-            pauseCanvas.GetComponent<CanvasModule>().SetActivePanel("Panel_Done");
             persistenceController.UnlockLevel(SceneManager.GetActiveScene().buildIndex + 1);
+
+            GameObject mkHolder = GameObject.FindWithTag("PlayerHolder");
+            if (mkHolder != null)
+                mkHolder.GetComponentInChildren<MK_MenuControl>().ToggleMenu("Panel_Done");
+            else
+                pauseCanvas.GetComponent<CanvasModule>().SetActivePanel("Panel_Done");
         }
     }
 }
