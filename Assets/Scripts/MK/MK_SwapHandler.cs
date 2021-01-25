@@ -7,8 +7,8 @@ namespace Scripts.MK {
 /** Event handler for CubeSwap.
  *
  *  @author Konstantin
- *  @source Assets/SteamVR/Extras/SteamVR_LaserPointer.cs
- *
+ *  
+ *  Source: Assets/SteamVR/Extras/SteamVR_LaserPointer.cs
  */
 public class MK_SwapHandler : MonoBehaviour {
     /** Event object.*/
