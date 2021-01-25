@@ -403,6 +403,11 @@ PrefabInstance:
       propertyPath: swapCooldown
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 3914013399278872473, guid: f3ff64a2598738b45a3de567958d7f1a,
+        type: 3}
+      propertyPath: m_Text
+      value: Pause Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 4028157720693875078, guid: f3ff64a2598738b45a3de567958d7f1a,
         type: 3}
       propertyPath: m_LocalScale.z
