@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/** Handels pause menu in Levels.
+/** Handels menus in Levels.
  *  
  *  @author Konstantin
  */
@@ -18,15 +18,18 @@ public class MK_MenuControl : MonoBehaviour
      *  could be used by other scripts */  
     public static bool paused = false;
     
-    /** Checks for Escape key and uses SetPauseMenu.
+    /** Checks for Escape key and uses ToggleMenu.
      */
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            ToggleMenu("Panel_Pause");
+            if (!levelCanvas.transform.GetChild(2).gameObject.activeSelf)
+                ToggleMenu("Panel_Pause");
         }
     }
-
+    
+    /** Goal functionality, opens Panel_Done.
+     */
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.name == goalColliderName) {
             ToggleMenu("Panel_Done");
