@@ -28,14 +28,6 @@ public class MK_MenuControl : MonoBehaviour
         }
     }
     
-    /** Goal functionality, opens Panel_Done.
-     */
-    void OnTriggerEnter(Collider other) {
-        if (other.gameObject.name == goalColliderName) {
-            ToggleMenu("Panel_Done");
-        }
-    }
-    
     /** Opens or closes Menu, stops time, handels cursor.
      *  Takes string names of panels
      */
