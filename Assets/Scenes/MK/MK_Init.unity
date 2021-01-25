@@ -197,6 +197,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1754476815720146821, guid: a1cc7b162d542c948a2c197145c33aa6,
+        type: 3}
+      propertyPath: teleporting
+      value: 
+      objectReference: {fileID: 475244, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 3}
     - target: {fileID: 4706843796579322429, guid: a1cc7b162d542c948a2c197145c33aa6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1049,6 +1054,11 @@ PrefabInstance:
       propertyPath: playerHolder
       value: 
       objectReference: {fileID: 963253608}
+    - target: {fileID: 377483143222323975, guid: 1e534057cdca3814e8173419a1a2cc87,
+        type: 3}
+      propertyPath: menuSceneName
+      value: MK_Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 7454385728361015048, guid: 1e534057cdca3814e8173419a1a2cc87,
         type: 3}
       propertyPath: m_LocalPosition.x

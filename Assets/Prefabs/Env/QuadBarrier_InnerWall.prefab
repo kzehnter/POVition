@@ -27,6 +27,11 @@ PrefabInstance:
       propertyPath: baseMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 03e93e3e931253d5ba56ded2b55daa57, type: 2}
+    - target: {fileID: 553042856493674206, guid: 73f84c3d0047a4e4a86ed99ab95d82b2,
+        type: 3}
+      propertyPath: textureToMesh.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 562935771702830108, guid: 73f84c3d0047a4e4a86ed99ab95d82b2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

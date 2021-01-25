@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// OnTriggerExit is not called if the triggering object is destroyed, set inactive, or if the collider is disabled. This script fixes that
-//
-// Usage: Wherever you read OnTriggerEnter() and want to consistently get OnTriggerExit
-// In OnTriggerEnter() call ReliableOnTriggerExit.NotifyTriggerEnter(other, gameObject, OnTriggerExit);
-// In OnTriggerExit call ReliableOnTriggerExit.NotifyTriggerExit(other, gameObject);
-//
-// Algorithm: Each ReliableOnTriggerExit is associated with a collider, which is added in OnTriggerEnter via NotifyTriggerEnter
-// Each ReliableOnTriggerExit keeps track of OnTriggerEnter calls
-// If ReliableOnTriggerExit is disabled or the collider is not enabled, call all pending OnTriggerExit calls
+/** This script is designed to fix problems with the pre-existing OnTriggerExit functionality.
+ *  source: https://forum.unity.com/threads/fix-ontriggerexit-will-now-be-called-for-disabled-gameobjects-colliders.657205/
+ */
 public class ReliableOnTriggerExit : MonoBehaviour
 {
+    // OnTriggerExit is not called if the triggering object is destroyed, set inactive, or if the collider is disabled. This script fixes that
+    //
+    // Usage: Wherever you read OnTriggerEnter() and want to consistently get OnTriggerExit
+    // In OnTriggerEnter() call ReliableOnTriggerExit.NotifyTriggerEnter(other, gameObject, OnTriggerExit);
+    // In OnTriggerExit call ReliableOnTriggerExit.NotifyTriggerExit(other, gameObject);
+    //
+    // Algorithm: Each ReliableOnTriggerExit is associated with a collider, which is added in OnTriggerEnter via NotifyTriggerEnter
+    // Each ReliableOnTriggerExit keeps track of OnTriggerEnter calls
+    // If ReliableOnTriggerExit is disabled or the collider is not enabled, call all pending OnTriggerExit calls
+
     public delegate void _OnTriggerExit(Collider c);
 
     Collider thisCollider;

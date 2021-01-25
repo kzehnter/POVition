@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 
+/** This module handles general canvas functionality.
+ *  @author Eduard
+ */
 public class CanvasModule : MonoBehaviour
 {
-    /** activates the Panel with the specified name, disabling all others */
+    /** Activates the Panel inside the Canvas with the specified name, disabling all others. */
     public void SetActivePanel(string panelName)
     {
         foreach (Component component in GetComponentsInChildren<RectTransform>(true))
@@ -17,7 +20,7 @@ public class CanvasModule : MonoBehaviour
         }
     }
 
-    /** quits the game */
+    /** Quits the game. */
     public void QuitGame()
     {
         Application.Quit();

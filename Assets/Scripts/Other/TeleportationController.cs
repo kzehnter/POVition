@@ -2,17 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/** This controller handles teleportation assets from SteamVR.
+ *  @author Eduard
+ */
 public class TeleportationController : MonoBehaviour
 {
-    public Transform vrTeleportation;
+    /** Teleporting asset from SteamVR. */
+    public Transform teleporting;
+
+    /** All TeleportationMarkerBase objects present in the current scene. */
+    public GameObject[] TeleportationMarkers { get => teleportationMarkers; }
     private GameObject[] teleportationMarkers;
 
-    public GameObject[] TeleportationMarkers { get => teleportationMarkers; }
-
+    /** Saves all present TeleportationMarkerBase objects to be found again once teleportation is activated and all such objects turned inactive. */
     public void InitializeTeleportation()
     {
         teleportationMarkers = GameObject.FindGameObjectsWithTag("VR_Teleportation");
-        Transform _vrTeleportation = Instantiate(vrTeleportation);
+        Transform _vrTeleportation = Instantiate(teleporting);
         _vrTeleportation.parent = this.transform;
     }
 }

@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Valve.VR;
 
+/** This module manages input specifically for canvas interactions in vr mode.
+ *  It builds on the pre-existing unity interaction system and adapts it for vr use.
+ *  source: https://www.youtube.com/watch?v=h_BMXDWv10I
+ */
 public class VR_InputModule : BaseInputModule
 {
     public SteamVR_Input_Sources m_TargetSource;
@@ -13,7 +17,6 @@ public class VR_InputModule : BaseInputModule
     private GameObject m_CurrentObject = null;
     private PointerEventData m_Data = null;
 
-
     protected override void Awake()
     {
         base.Awake();
@@ -22,8 +25,6 @@ public class VR_InputModule : BaseInputModule
     }
     public override void Process()
     {
-
-        // UI Pointer processing
         m_Data.Reset();
         m_Data.position = new Vector2(m_Camera.pixelWidth / 2, m_Camera.pixelHeight / 2);
 
@@ -78,6 +79,4 @@ public class VR_InputModule : BaseInputModule
         data.pointerPress = null;
         data.rawPointerPress = null;
     }
-
-
 }

@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/** SwapCube actions.
- *
+/** This class represents the standard swap cube.
  *  @author Eduard
  */
 public class SwapCubeAction_Basic : SwapCubeAction
 {
-    /** Only performs Swap.
-     */
+    /** Only performs swap. */
     public override void performAction(Transform target)
     {
         performSwap(target);

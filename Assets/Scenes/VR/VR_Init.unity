@@ -128,6 +128,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1754476815720146821, guid: a1cc7b162d542c948a2c197145c33aa6,
+        type: 3}
+      propertyPath: teleporting
+      value: 
+      objectReference: {fileID: 475244, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 3}
     - target: {fileID: 4706843796579322429, guid: a1cc7b162d542c948a2c197145c33aa6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -393,6 +398,11 @@ PrefabInstance:
       propertyPath: pauseMenuCanvas
       value: 
       objectReference: {fileID: 1398786340}
+    - target: {fileID: 2122388360163277905, guid: f3ff64a2598738b45a3de567958d7f1a,
+        type: 3}
+      propertyPath: swapCooldown
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4028157720693875078, guid: f3ff64a2598738b45a3de567958d7f1a,
         type: 3}
       propertyPath: m_LocalScale.z
@@ -816,6 +826,11 @@ PrefabInstance:
       propertyPath: teleportationController
       value: 
       objectReference: {fileID: 563203462}
+    - target: {fileID: 4105436541976147624, guid: 0abc763cccabb8d48b9ed6d843d3a770,
+        type: 3}
+      propertyPath: menuSceneName
+      value: VR_Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 4543852838272797126, guid: 0abc763cccabb8d48b9ed6d843d3a770,
         type: 3}
       propertyPath: m_Name

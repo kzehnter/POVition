@@ -9,7 +9,7 @@ using UnityEngine.UI;
  */
 public class SwapCubeAction_Count : SwapCubeAction
 {
-    /** Amount of times a swap will be possible.*/
+    /** Amount of times a swap will be possible. */
     public int countNr;
     
     /** All texts on cube. */

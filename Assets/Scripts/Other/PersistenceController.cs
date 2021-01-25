@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/** This controller manages persistence for in-game level progress. 
+/** This controller manages persistence for in-game level progress.
  *  @author Eduard
  */
 public class PersistenceController : MonoBehaviour

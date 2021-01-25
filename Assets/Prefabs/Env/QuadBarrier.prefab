@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8673806164850637008}
   - component: {fileID: 1308832893574352671}
   - component: {fileID: 553042856493674206}
-  - component: {fileID: 2957846927235268441}
   m_Layer: 0
   m_Name: QuadBarrier
   m_TagString: Untagged
@@ -79,19 +78,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textureToMesh: {x: 1, y: 1, z: 1}
---- !u!114 &2957846927235268441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890618142308032654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ec45399b0e6e143bf0f64a1dc3785a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseMaterial: {fileID: 0}
 --- !u!1 &2410506500435907346
 GameObject:
   m_ObjectHideFlags: 0

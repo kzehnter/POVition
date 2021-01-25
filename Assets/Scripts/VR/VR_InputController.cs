@@ -2,39 +2,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Valve.VR;
 using Valve.VR.Extras;
 
+/** This controller manages inputs in vr mode.
+ *  @author Eduard
+ */
 public class VR_InputController : MonoBehaviour
 {
-    /** cooldown time for cube teleport */
+    /** cooldown time for cube teleport in ticks */
     public int swapCooldown;
     private int _swapCooldown = 0;
     
-    /**   */
     private SteamVR_LaserPointer laserPointer;
-    /**   */
     public SteamVR_Input_Sources m_TargetSource;
-    /**   */
     public SteamVR_Action_Boolean m_OpenMenu;
-    /**   */
     public Canvas pauseCanvas;
 
-    /** adds callback to laser pointer click event. */
+    /** Adds callback to laser pointer click event. */
     private void Awake()
     {
         laserPointer = GetComponentInChildren<SteamVR_LaserPointer>();
         laserPointer.PointerClick += OnPointerClick;
     }
 
-    /** removes all event callbacks. */
+    /** Removes all event callbacks. */
     private void OnDestroy()
     {
         laserPointer.PointerClick -= OnPointerClick;
     }
 
-    /** updates cooldown, toggles menu. */
+    /** Updates cooldown, toggles menu on click. */
     void Update()
     {
         if (_swapCooldown > 0)
@@ -48,8 +46,7 @@ public class VR_InputController : MonoBehaviour
         }
     }
 
-
-    /** Event callback. Triggers SwapCube interaction via laser pointer click  */
+    /** Event callback. Triggers SwapCube interaction via laser pointer click. */
     private void OnPointerClick(object sender, PointerEventArgs args)
     {
         if (args.target.tag == "SwapCube" && _swapCooldown == 0)
@@ -59,6 +56,7 @@ public class VR_InputController : MonoBehaviour
         }
     }
     
+    /** (De)activates pause canvas and panel. */
     private void SetPauseMenu(bool isOpen)
     {
         pauseCanvas.gameObject.SetActive(isOpen);
