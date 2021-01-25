@@ -34,7 +34,6 @@ public abstract class SceneController : MonoBehaviour
 
     public virtual void LoadNextLevel()
     {
-        Debug.Log(SceneManager.GetActiveScene().buildIndex);
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
@@ -49,7 +48,6 @@ public abstract class SceneController : MonoBehaviour
 
     private void OnLevelWasLoaded(int level)
     {
-        Debug.Log("test");
         teleportationController.InitializeTeleportation();
     }
 }
