@@ -25,7 +25,6 @@ public class PersistenceController : MonoBehaviour
             
             if (path.Contains(scenePathPrefix))
             {
-                Debug.Log(path);
                 levels.Add(SceneUtility.GetBuildIndexByScenePath(path), false);
             }
         }
