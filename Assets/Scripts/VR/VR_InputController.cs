@@ -14,9 +14,11 @@ public class VR_InputController : MonoBehaviour
     public int swapCooldown;
     private int _swapCooldown = 0;
     
+    /** Handels laserpointer events.*/
     private SteamVR_LaserPointer laserPointer;
     public SteamVR_Input_Sources m_TargetSource;
     public SteamVR_Action_Boolean m_OpenMenu;
+    /** Holds pause panels. */
     public Canvas pauseCanvas;
 
     /** Adds callback to laser pointer click event. */
@@ -46,7 +48,11 @@ public class VR_InputController : MonoBehaviour
         }
     }
 
-    /** Event callback. Triggers SwapCube interaction via laser pointer click. */
+    /** Event callback. Triggers SwapCube interaction via laser pointer click. 
+     *  
+     *  @param sender
+     *  @param args holds teleport target
+     */
     private void OnPointerClick(object sender, PointerEventArgs args)
     {
         if (args.target.tag == "SwapCube" && _swapCooldown == 0)
@@ -56,7 +62,10 @@ public class VR_InputController : MonoBehaviour
         }
     }
     
-    /** (De)activates pause canvas and panel. */
+    /** (De)activates pause canvas and panel. 
+     *  
+     *  @param isOpen bool
+     */
     private void SetPauseMenu(bool isOpen)
     {
         pauseCanvas.gameObject.SetActive(isOpen);

@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Scripts.MK {
-
 /** Event handler for CubeSwap.
  *
  *  @author Konstantin
@@ -15,14 +13,16 @@ public class MK_SwapHandler : MonoBehaviour {
     public event SwapEventHandler SwapClick;  
     
     /** Event which can be used in other classes.
+     *  
+     *  @param e Has Teleport target. 
      */
     public virtual void OnSwapClick(SwapEventArgs e) {
         if (SwapClick != null) { SwapClick(this, e); }
     }
 
     /** Raycast object detection.
-     *  ray from camera direction
-     *  object saved in SwapEventArgs
+     *  ray from camera direction.
+     *  object saved in SwapEventArgs.
      */
     void Update() {
         if (Input.GetMouseButtonDown(0) && !MK_MenuControl.paused){
@@ -47,4 +47,3 @@ public struct SwapEventArgs{
 /** Delegate for event handler.
  */
 public delegate void SwapEventHandler(object sender, SwapEventArgs e);
-}

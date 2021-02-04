@@ -4,7 +4,9 @@ using UnityEngine;
 using Valve.VR.InteractionSystem;
 
 /** This module locks teleportation and the physics raycaster when intersecting with another collider.
+ *  
  *  This is meant to prevent noclipping with the controller in vr mode.
+ *  
  *  @author Eduard
  */
 public class VR_InteractionLock : MonoBehaviour
@@ -14,7 +16,10 @@ public class VR_InteractionLock : MonoBehaviour
 
     public TeleportationController teleportationController;
 
-    /** Activates the interaction lock for all colliders which are not part of the controller itself */
+    /** Activates the interaction lock for all colliders which are not part of the controller itself. 
+     *
+     *  @param other Collider that touches this
+     */
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponentInParent<HandCollider>() == null)
@@ -24,7 +29,10 @@ public class VR_InteractionLock : MonoBehaviour
         }
     }
 
-    /** Deactivates the interaction lock for all colliders which are not part of the controller itself */
+    /** Deactivates the interaction lock for all colliders which are not part of the controller itself.
+     *  
+     *  @param other Collider that touches this
+     */
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.GetComponentInParent<HandCollider>() == null)
@@ -34,7 +42,10 @@ public class VR_InteractionLock : MonoBehaviour
         }
     }
 
-    /** Sets the locking state for all TeleportMarkerBase objects found in the level scene. */
+    /** Sets the locking state for all TeleportMarkerBase objects found in the level scene. 
+     *
+     *  @param isLocked bool
+     */
     private void SetTeleportationLock(bool isLocked)
     {
         foreach (GameObject obj in teleportationController.TeleportationMarkers)

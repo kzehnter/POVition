@@ -14,8 +14,7 @@ public class MK_MenuControl : MonoBehaviour
     /** Normally "Goal Cube".*/
     public string goalColliderName;
 
-    /** Status of menu. 
-     *  could be used by other scripts */  
+    /** Status of menu for usage in other scripts. */  
     public static bool paused = false;
     
     /** Checks for Escape key and uses ToggleMenu.
@@ -29,7 +28,10 @@ public class MK_MenuControl : MonoBehaviour
     }
     
     /** Opens or closes Menu, stops time, handels cursor.
+     *  
      *  Takes string names of panels
+     *
+     *  @param name Name of the Menu Panel you want to toggle
      */
     public void ToggleMenu(string name){ 
         if (!paused) {

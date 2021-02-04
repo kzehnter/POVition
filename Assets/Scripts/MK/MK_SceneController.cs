@@ -14,8 +14,8 @@ public class MK_SceneController : SceneController
     public GameObject playerHolder;
     
     /** Puts player into next scene.
-     *  current scene index + 1
-     *  if last level, go to main menu
+     *  current scene index + 1.
+     *  if last level, go to main menu.
      */
     public override void LoadNextLevel()
     {

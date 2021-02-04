@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Scripts.MK;
 
 /** MK Variant of PlayerAction. 
  *
@@ -17,12 +16,11 @@ public class MK_PlayerAction : MonoBehaviour
     public int swapCooldown;
     private int _swapCooldown = 0;
 
-    /** True if swap is happening.
-     *  Usable from other scripts */
+    /** True if swap is happening, for usage in other scripts. */
     public static bool swapping = false;
 
     /** event object for Mouse catching.*/
-    private MK_SwapHandler swapEvent;
+    public MK_SwapHandler swapEvent;
     
     /** Adds callback to Swapclick event.
      */
@@ -48,6 +46,9 @@ public class MK_PlayerAction : MonoBehaviour
 
     /** Performs Swap actions if player clicks on SwapCube.
      *  Gets called by OnSwapClick() in MK_SwapHandler
+     *
+     *  @param sender
+     *  @param args has target for teleportation
      */
     private void OnSwapClick(object sender, SwapEventArgs args) {
         if (args.target.tag == "SwapCube" && _swapCooldown == 0) {

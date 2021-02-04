@@ -11,7 +11,7 @@ using UnityEngine;
  */
 public class MK_PlayerMovement : MonoBehaviour
 {
-    /** Movement speed for player ca. 2-5.*/
+    /** Movement speed for player ca 2-5.*/
     public float speed;
     /** Main Camera, for vertical adjustment.*/
     public Camera cam;
@@ -26,15 +26,16 @@ public class MK_PlayerMovement : MonoBehaviour
     /** Used to move player to ground.*/
     private float gravity = 0;
     
-    /** lock cursor on scene start or after closing pause menu.*/
+    /** lock cursor on scene start or after closing pause menu.
+     */
     void OnEnable() {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     /** Movement at every Tick.
-     *  Character Controller used for movement
-     *  Mouse for Orientation
-     *  Player can move on ground, turn head and fall
+     *  Character Controller used for movement.
+     *  Mouse for Orientation.
+     *  Player can move on ground, turn the head and fall.
      */
     void Update() {
         if (!MK_PlayerAction.swapping && !MK_MenuControl.paused) {
