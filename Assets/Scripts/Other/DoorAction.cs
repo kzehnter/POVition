@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /** This class handles basic door behavior.
+ *  
  *  @author Eduard
  */
 public class DoorAction : MonoBehaviour
@@ -30,7 +31,10 @@ public class DoorAction : MonoBehaviour
         trigger.SwitchToggle -= OnPressurePlateToggle;
     }
 
-    /** Event callback. Changes door state to open or closed. */
+    /** Event callback. Changes door state to open or closed. 
+     *  
+     *  @param triggered 
+     */
     void OnPressurePlateToggle(bool triggered)
     {
         // invert condition when initialStateOpen true

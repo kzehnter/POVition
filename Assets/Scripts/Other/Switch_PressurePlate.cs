@@ -19,7 +19,10 @@ public class Switch_PressurePlate : Switch
         animator = GetComponentInParent<Animator>();
     }
 
-    /** Puts the pressure plate in a pressed state when a SwapCube is found on top. */
+    /** Puts the pressure plate in a pressed state when a SwapCube is found on top. 
+     *
+     *  @param other
+     */
     private void OnTriggerEnter(Collider other)
     {
         ReliableOnTriggerExit.NotifyTriggerEnter(other, gameObject, OnTriggerExit);
@@ -30,7 +33,10 @@ public class Switch_PressurePlate : Switch
         }
     }
 
-    /** Puts the pressure plate in a released state when the SwapCube exits the top area. */
+    /** Puts the pressure plate in a released state when the SwapCube exits the top area. 
+     *
+     *  @param other
+     */
     private void OnTriggerExit(Collider other)
     {
         ReliableOnTriggerExit.NotifyTriggerExit(other, gameObject);

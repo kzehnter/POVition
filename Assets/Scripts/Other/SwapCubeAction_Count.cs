@@ -29,11 +29,14 @@ public class SwapCubeAction_Count : SwapCubeAction
     }
 
     /** Swap and check if cube should be destroyed.
+     *
+     *  @param target should be the Player
      */
     public override void performAction(Transform target) {
         performSwap(target);
         countNr--;
         if (countNr <= 0) { 
+            // disable swap functionality and go black
             this.tag = "Untagged";
             this.GetComponent<Renderer>().material.color = Color.black;
             showText(); 

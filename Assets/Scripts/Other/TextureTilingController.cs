@@ -18,7 +18,8 @@ public class TextureTilingController : MonoBehaviour
     private Renderer[] quads;
     private Vector3 prevScale, prevTextureToMesh;
 
-    /** Manually initialize and retain unique material instances for each child quad object to prevent memory leaks. */
+    /** Manually initialize and retain unique material instances for 
+     *  each child quad object to prevent memory leaks. */
     void Awake()
     {
         foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
@@ -50,7 +51,8 @@ public class TextureTilingController : MonoBehaviour
         }
     }
 
-    /** Updates the texture tiling for each child quad proportional to the respective barrier dimensions to prevent squeezed textures. */
+    /** Updates the texture tiling for each child quad proportional 
+     *  to the respective barrier dimensions to prevent squeezed textures. */
     void UpdateTiling()
     {
         if (quads != null)

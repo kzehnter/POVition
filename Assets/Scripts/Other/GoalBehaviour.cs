@@ -21,7 +21,10 @@ public class GoalBehaviour : MonoBehaviour
         persistenceController = GameObject.Find("PersistenceController").GetComponent<PersistenceController>();
     }
 
-    /** engages level completion when the goal object is touched. */
+    /** Engages level completion when the goal object is touched. 
+     *
+     *  @param other Collider
+     */
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.name == goalColliderName)
         {

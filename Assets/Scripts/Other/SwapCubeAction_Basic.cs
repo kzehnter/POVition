@@ -7,7 +7,10 @@ using UnityEngine;
  */
 public class SwapCubeAction_Basic : SwapCubeAction
 {
-    /** Only performs swap. */
+    /** Only performs swap. 
+     *
+     *  @param target
+     */
     public override void performAction(Transform target)
     {
         performSwap(target);
