@@ -14,7 +14,10 @@ public class TeleportationController : MonoBehaviour
     public GameObject[] TeleportationMarkers { get => teleportationMarkers; }
     private GameObject[] teleportationMarkers;
 
-    /** Saves all present TeleportationMarkerBase objects to be found again once teleportation is activated and all such objects turned inactive. */
+    /** Handels Teleportation areas. 
+     *
+     *  Saves all present TeleportationMarkerBase objects to be found again 
+     *  once teleportation is activated and all such objects turned inactive. */
     public void InitializeTeleportation()
     {
         teleportationMarkers = GameObject.FindGameObjectsWithTag("VR_Teleportation");

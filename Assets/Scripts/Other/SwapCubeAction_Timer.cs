@@ -19,6 +19,8 @@ public class SwapCubeAction_Timer : SwapCubeAction
     private float timeForText;
 
     /** Waits delayTime and swaps.
+     *
+     *  @param target
      */
     IEnumerator waiter(Transform target) {
         running = true;
@@ -54,6 +56,8 @@ public class SwapCubeAction_Timer : SwapCubeAction
     
     /** Swap, start waiter().
      *  Startet by OnPointerClick in PlayerAction
+     *
+     *  @param target should be Player
      */
     public override void performAction(Transform target) {
         if (!running) {

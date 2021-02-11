@@ -11,7 +11,8 @@ public class PersistenceController : MonoBehaviour
     /** File path prefix for level scenes. */
     public string scenePathPrefix;
 
-    /** Sorted list of levels found in the build containing build index (key) and lock state (value). */
+    /** Sorted list of levels found in the build. 
+     *  contains build index (key) and lock state (value). */
     public SortedList<int, bool> Levels { get => levels; }
     private SortedList<int, bool> levels;
 
@@ -33,7 +34,10 @@ public class PersistenceController : MonoBehaviour
         UnlockLevel(levels.Keys[0]);
     }
 
-    /** Unlocks level scene with the given build index if such entry is found. */
+    /** Unlocks level scene with the given build index if such entry is found. 
+     *
+     *  @param buildIndex ID of scene in build
+     */
     public void UnlockLevel(int buildIndex)
     {
         if (levels.ContainsKey(buildIndex))

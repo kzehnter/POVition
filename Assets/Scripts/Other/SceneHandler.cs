@@ -10,6 +10,8 @@ using UnityEngine.SceneManagement;
 public class SceneHandler : MonoBehaviour
 {
     /** Loads scene by name.
+     *
+     *  @param name
      */
     public void LoadGameScene(string name){
         SceneManager.LoadScene(name);

@@ -4,11 +4,15 @@ using UnityEngine;
 using Valve.VR;
 
 /** This module handles general canvas functionality.
+ *  
  *  @author Eduard
  */
 public class CanvasModule : MonoBehaviour
 {
-    /** Activates the Panel inside the Canvas with the specified name, disabling all others. */
+    /** Activates the Panel inside the Canvas, disabling all others. 
+     *
+     *  @param panelName String name of panel which gets activated.
+     */
     public void SetActivePanel(string panelName)
     {
         foreach (Component component in GetComponentsInChildren<RectTransform>(true))
