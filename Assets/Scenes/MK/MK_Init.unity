@@ -166,7 +166,7 @@ PrefabInstance:
     - target: {fileID: 5896973230920422673, guid: 7579636b9a6a22147bc221693764051e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5896973230920422673, guid: 7579636b9a6a22147bc221693764051e,
         type: 3}
@@ -190,97 +190,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7579636b9a6a22147bc221693764051e, type: 3}
---- !u!1001 &504827791
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1754476815720146821, guid: a1cc7b162d542c948a2c197145c33aa6,
-        type: 3}
-      propertyPath: teleporting
-      value: 
-      objectReference: {fileID: 475244, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 3}
-    - target: {fileID: 4706843796579322429, guid: a1cc7b162d542c948a2c197145c33aa6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4706843796579322429, guid: a1cc7b162d542c948a2c197145c33aa6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4706843796579322429, guid: a1cc7b162d542c948a2c197145c33aa6,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4706843796579322429, guid: a1cc7b162d542c948a2c197145c33aa6,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4706843796579322429, guid: a1cc7b162d542c948a2c197145c33aa6,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4706843796579322429, guid: a1cc7b162d542c948a2c197145c33aa6,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4706843796579322429, guid: a1cc7b162d542c948a2c197145c33aa6,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4706843796579322429, guid: a1cc7b162d542c948a2c197145c33aa6,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4706843796579322429, guid: a1cc7b162d542c948a2c197145c33aa6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4706843796579322429, guid: a1cc7b162d542c948a2c197145c33aa6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4706843796579322429, guid: a1cc7b162d542c948a2c197145c33aa6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375010252852237741, guid: a1cc7b162d542c948a2c197145c33aa6,
-        type: 3}
-      propertyPath: m_Name
-      value: TeleportationController
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375010252852237741, guid: a1cc7b162d542c948a2c197145c33aa6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a1cc7b162d542c948a2c197145c33aa6, type: 3}
---- !u!114 &504827792 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1754476815720146821, guid: a1cc7b162d542c948a2c197145c33aa6,
-    type: 3}
-  m_PrefabInstance: {fileID: 504827791}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92fa1d03c709060409a8f1bde3222da4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &679453099
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +254,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &717860569 stripped
 GameObject:
@@ -1048,7 +957,7 @@ PrefabInstance:
         type: 3}
       propertyPath: teleportationController
       value: 
-      objectReference: {fileID: 504827792}
+      objectReference: {fileID: 0}
     - target: {fileID: 377483143222323975, guid: 1e534057cdca3814e8173419a1a2cc87,
         type: 3}
       propertyPath: playerHolder
@@ -1097,7 +1006,7 @@ PrefabInstance:
     - target: {fileID: 7454385728361015048, guid: 1e534057cdca3814e8173419a1a2cc87,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7454385728361015048, guid: 1e534057cdca3814e8173419a1a2cc87,
         type: 3}

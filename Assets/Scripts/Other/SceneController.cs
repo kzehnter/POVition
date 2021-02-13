@@ -9,7 +9,6 @@ using UnityEngine.SceneManagement;
 public abstract class SceneController : MonoBehaviour
 {
     public string menuSceneName;
-    public TeleportationController teleportationController;
 
     /** Puts all initial objects present in DontDestroyOnLoad. 
      *  Adds event callbacks to SceneManager. */
@@ -23,7 +22,7 @@ public abstract class SceneController : MonoBehaviour
 
         SceneManager.sceneLoaded += (Scene s, LoadSceneMode sm) =>
         {
-            teleportationController.InitializeTeleportation();
+          
         };
     }
 
