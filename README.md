@@ -1,3 +1,7 @@
+This project is a VR and Mouse+Keyboard game made in Unity written in C# for the HTC Vive. Models were created in Blender and textures in GIMP.
+
+This is required for the class that the project was written for:
+
 # Funktional:
 
 ##### Muss-Kriterien
